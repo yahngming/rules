@@ -120,3 +120,7 @@ IP-CIDR,35.247.128.0/18,no-resolve
 #TW
 IP-CIDR,35.221.128.0/17,no-resolve
 IP-CIDR,5.42.160.0/24,no-resolve
+
+#US
+IP-CIDR,64.224.0.0/21,no-resolve
+IP-CIDR,64.224.24.0/21,no-resolve
