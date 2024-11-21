@@ -1,5 +1,6 @@
 DOMAIN-SUFFIX,logon.nyctermoonwow.net
 DOMAIN-SUFFIX,logon.turtle-wow.org
+IP-CIDR,51.38.0.0/16,no-resolve
 IP-CIDR,51.77.0.0/16,no-resolve
 IP-CIDR,51.83.0.0/16,no-resolve
 IP-CIDR,51.89.0.0/16,no-resolve
