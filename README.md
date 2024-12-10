@@ -1,3 +1,3 @@
 # rules
 
-Fuck the Great Fire Wall
+Making the world a better place.
