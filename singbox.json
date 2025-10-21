@@ -103,22 +103,19 @@
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
       },
       {
         "tag": "geosite-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geosite-cn.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geosite-cn.srs"
       },
       {
         "tag": "category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geosite-category-ads-all.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geosite-category-ads-all.srs"
       }
     ],
     "auto_detect_interface": true
