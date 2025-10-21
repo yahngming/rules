@@ -7,24 +7,23 @@
     "servers": [
       {
         "type": "tls",
-        "tag": "remote",
+        "tag": "global",
         "server": "1.1.1.1"
       },
       {
         "type": "udp",
-        "tag": "local",
-        "server": "223.5.5.5",
-        "detour": "DIRECT"
+        "tag": "direct",
+        "server": "223.5.5.5"
       }
     ],
     "rules": [
       {
         "clash_mode": "Global",
-        "server": "remote"
+        "server": "global"
       },
       {
         "clash_mode": "Direct",
-        "server": "local"
+        "server": "direct"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -62,7 +61,7 @@
   "outbounds": [],
   "route": {
     "default_domain_resolver": {
-      "server": "local",
+      "server": "direct",
       "rewrite_ttl": 60,
       "client_subnet": "1.1.1.1"
     },
@@ -76,15 +75,15 @@
       },
       {
         "ip_is_private": true,
-        "outbound": "direct"
+        "outbound": "DIRECT"
       },
       {
         "rule_set": "geoip-cn",
-        "outbound": "direct"
+        "outbound": "DIRECT"
       },
       {
         "rule_set": "geosite-cn",
-        "outbound": "direct"
+        "outbound": "DIRECT"
       },
       {
         "rule_set": "category-ads-all",
