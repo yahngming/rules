@@ -26,7 +26,7 @@
         "server": "direct"
       }
     ],
-    "strategy": "prefer_ipv4"
+    "strategy": "ipv4_only"
   },
   "inbounds": [
     {
@@ -74,8 +74,40 @@
         "action": "hijack-dns"
       },
       {
-        "ip_is_private": true,
-        "outbound": "DIRECT"
+        "rule_set": "geosite-category-ads-all",
+        "action": "reject"
+      },
+      {
+        "rule_set": "geosite-category-emby",
+        "outbound": "Emby"
+      },
+      {
+        "rule_set": "geosite-github",
+        "outbound": "GitHub"
+      },
+      {
+        "rule_set": "geosite-netflix",
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "geosite-steam",
+        "outbound": "Steam"
+      },
+      {
+        "rule_set": "geosite-youtube",
+        "outbound": "YouTube"
+      },
+      {
+        "rule_set": "geoip-hk",
+        "outbound": "HK"
+      },
+      {
+        "rule_set": "geoip-jp",
+        "outbound": "JP"
+      },
+      {
+        "rule_set": "geoip-us",
+        "outbound": "US"
       },
       {
         "rule_set": "geoip-cn",
@@ -86,8 +118,8 @@
         "outbound": "DIRECT"
       },
       {
-        "rule_set": "category-ads-all",
-        "action": "reject"
+        "ip_is_private": true,
+        "outbound": "DIRECT"
       },
       {
         "clash_mode": "Direct",
@@ -100,22 +132,59 @@
     ],
     "rule_set": [
       {
-        "tag": "geoip-cn",
         "type": "remote",
-        "format": "binary",
+        "tag": "geoip-cn",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
       },
       {
-        "tag": "geosite-cn",
         "type": "remote",
-        "format": "binary",
+        "tag": "geoip-hk",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-hk.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-jp",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-jp.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-us",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-us.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-category-ads-all",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-category-emby",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-emby.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-cn",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs"
       },
       {
-        "tag": "category-ads-all",
         "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs"
+        "tag": "geosite-github",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-netflix",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-steam",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-youtube",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
       }
     ],
     "auto_detect_interface": true
