@@ -1,12 +1,4 @@
 [[rulesets]]
-group = "WHITE"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Github.list"
-
-[[rulesets]]
-group = "WHITE"
-ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/white.list"
-
-[[rulesets]]
 group = "REJECT"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
 
@@ -29,6 +21,14 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanPro
 [[rulesets]]
 group = "Emby"
 ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/emby.list"
+
+[[rulesets]]
+group = "GitHub"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Github.list"
+
+[[rulesets]]
+group = "GitHub"
+ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/white.list"
 
 [[rulesets]]
 group = "Netflix"
