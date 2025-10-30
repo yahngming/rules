@@ -68,6 +68,11 @@ proxy-groups:
       - DIRECT
     include-all: true
     filter: 🇺🇸
+  - name: GLOBAL
+    type: select
+    proxies:
+      - DIRECT
+    include-all: true
 
 rule-providers:
   category-ads-all:
