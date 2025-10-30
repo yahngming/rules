@@ -11,63 +11,63 @@ proxy-groups:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: (?i)Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: GitHub
     type: select
     proxies:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: 自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: (?i)自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: Netflix
     type: select
     proxies:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: (?i)🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: Steam
     type: select
     proxies:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: (?i)🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: YouTube
     type: select
     proxies:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: (?i)🇦🇷|🇮🇳|🇳🇬|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: EU
     type: select
     proxies:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
+    filter: (?i)🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
   - name: HK
     type: select
     proxies:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: 🇭🇰
+    filter: (?i)🇭🇰
   - name: JP
     type: select
     proxies:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: 🇯🇵
+    filter: (?i)🇯🇵
   - name: US
     type: select
     proxies:
       - GLOBAL
       - DIRECT
     include-all: true
-    filter: 🇺🇸
+    filter: (?i)🇺🇸
   - name: GLOBAL
     type: select
     include-all: true
