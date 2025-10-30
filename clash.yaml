@@ -5,50 +5,45 @@ log-level: warning
 external-controller: 127.0.0.1:9090
 
 proxy-groups:
-  - name: 奈飞节点
-    include-all: true
-    filter: (?i)NF|奈飞|解锁|Netflix|NETFLIX|实验
-    type: select
-  - name: 网易音乐
-    type: select
-    include-all: true
-    filter: (?i)网易|音乐|实验
   - name: Emby
     type: select
     include-all: true
-    filter: (?i)Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
+    proxies:
+      - DEFAULT
+      - DIRECT
   - name: GitHub
     type: select
     include-all: true
-    filter: (?i)自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: 自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: Netflix
     type: select
     include-all: true
-    filter: (?i)🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: Steam
     type: select
     include-all: true
-    filter: (?i)🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: YouTube
     type: select
     include-all: true
-    filter: (?i)🇦🇷|🇮🇳|🇳🇬|自建|实验|日用|福利|TEST|0.1x|0.2x
+    filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: EU
     type: select
     include-all: true
-    filter: (?i)🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
+    filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
   - name: HK
     type: select
     include-all: true
-    filter: (?i)🇭🇰
+    filter: 🇭🇰
   - name: JP
     type: select
     include-all: true
-    filter: (?i)🇯🇵
+    filter: 🇯🇵
   - name: US
     type: select
     include-all: true
-    filter: (?i)🇺🇸
+    filter: 🇺🇸
   - name: DEFAULT
     type: select
     include-all: true
