@@ -8,32 +8,65 @@ proxy-groups:
   - name: Emby
     type: select
     proxies:
-      - filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
       - GLOBAL
       - DIRECT
+    include-all: true
+    filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: GitHub
     type: select
+    proxies:
+      - GLOBAL
+      - DIRECT
+    include-all: true
     filter: 自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: Netflix
     type: select
+    proxies:
+      - GLOBAL
+      - DIRECT
+    include-all: true
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: Steam
     type: select
+    proxies:
+      - GLOBAL
+      - DIRECT
+    include-all: true
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: YouTube
     type: select
+    proxies:
+      - GLOBAL
+      - DIRECT
+    include-all: true
     filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: EU
     type: select
+    proxies:
+      - GLOBAL
+      - DIRECT
+    include-all: true
     filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
   - name: HK
     type: select
+    proxies:
+      - GLOBAL
+      - DIRECT
+    include-all: true
     filter: 🇭🇰
   - name: JP
     type: select
+    proxies:
+      - GLOBAL
+      - DIRECT
+    include-all: true
     filter: 🇯🇵
   - name: US
     type: select
+    proxies:
+      - GLOBAL
+      - DIRECT
+    include-all: true
     filter: 🇺🇸
   - name: GLOBAL
     type: select
