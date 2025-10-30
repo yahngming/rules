@@ -14,7 +14,7 @@
         "type": "tls",
         "tag": "global",
         "server": "1.1.1.1",
-        "detour": "GLOBAL"
+        "detour": "DEFAULT"
       }
     ],
     "rules": [
@@ -171,7 +171,7 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
       }
     ],
-    "final": "GLOBAL",
+    "final": "DEFAULT",
     "auto_detect_interface": true,
     "default_domain_resolver": "local"
   },
