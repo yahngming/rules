@@ -111,13 +111,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  ChinaDomain:
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    path: ./ruleset/ChinaDomain.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   Download:
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
     path: ./ruleset/Download.list
@@ -125,47 +118,82 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  GitHub:
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Github.list
-    path: ./ruleset/GitHub.list
-    behavior: classical
+  github:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml
+    path: ./ruleset/github.yaml
+    behavior: domain
     interval: 86400
-    format: text
+    format: yaml
     type: http
-  LocalAreaNetwork:
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    path: ./ruleset/LocalAreaNetwork.list
-    behavior: classical
+  google:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml
+    path: ./ruleset/google.yaml
+    behavior: domain
     interval: 86400
-    format: text
+    format: yaml
     type: http
-  Netflix:
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
-    path: ./ruleset/Netflix.list
-    behavior: classical
+  private:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    behavior: domain
     interval: 86400
-    format: text
+    format: yaml
     type: http
-  Steam:
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
-    path: ./ruleset/Steam.list
-    behavior: classical
+  cn:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml
+    path: ./ruleset/cn.yaml
+    behavior: domain
     interval: 86400
-    format: text
+    format: yaml
     type: http
-  SteamCN:
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-    path: ./ruleset/SteamCN.list
-    behavior: classical
+  ipcn:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml
+    path: ./ruleset/ipcn.yaml
+    behavior: domain
     interval: 86400
-    format: text
+    format: yaml
     type: http
-  YouTube:
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
-    path: ./ruleset/YouTube.list
-    behavior: classical
+  ipus:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/us.yaml
+    path: ./ruleset/ipus.yaml
+    behavior: domain
     interval: 86400
-    format: text
+    format: yaml
+    type: http
+  iphk:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/hk.yaml
+    path: ./ruleset/iphk.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  ipjp:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/jp.yaml
+    path: ./ruleset/ipjp.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  netflix:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml
+    path: ./ruleset/netflix.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  steam:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.yaml
+    path: ./ruleset/steam.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  youtube:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml
+    path: ./ruleset/youtube.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
     type: http
   YouTubeMusic:
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTubeMusic.list
@@ -174,16 +202,16 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Emby:
-    url: https://raw.githubusercontent.com/yahngming/rules/master/Emby.list
-    path: ./ruleset/Emby.list
+  emby:
+    url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
+    path: ./ruleset/emby.list
     behavior: classical
     interval: 86400
     format: text
     type: http
-  TurtleWoW:
-    url: https://raw.githubusercontent.com/yahngming/rules/master/TurtleWoW.list
-    path: ./ruleset/TurtleWoW.list
+  turtlewow:
+    url: https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.list
+    path: ./ruleset/turtlewow.list
     behavior: classical
     interval: 86400
     format: text
@@ -195,15 +223,17 @@ rules:
   - "RULE-SET,BanEasyListChina,REJECT"
   - "RULE-SET,BanEasyPrivacy,REJECT"
   - "RULE-SET,BanProgramAD,🍃 应用净化"
-  - "RULE-SET,Emby,Emby"
-  - "RULE-SET,GitHub,GitHub"
+  - "RULE-SET,emby,Emby"
+  - "RULE-SET,github,GitHub"
   - "RULE-SET,Steam,Steam"
   - "RULE-SET,YouTube,YouTube"
+  - "RULE-SET,google,US"
   - "RULE-SET,YouTubeMusic,US"
-  - "RULE-SET,TurtleWoW,EU"
+  - "RULE-SET,turtlewow,EU"
   - "RULE-SET,Netflix,Netflix"
-  - "RULE-SET,LocalAreaNetwork,DIRECT"
-  - "RULE-SET,ChinaDomain,DIRECT"
+  - "RULE-SET,private,DIRECT"
+  - "RULE-SET,cn,DIRECT"
+  - "RULE-SET,cnip,DIRECT"
   - "RULE-SET,SteamCN,DIRECT"
   - "RULE-SET,Download,DIRECT"
   - "GEOIP,CN,DIRECT"
