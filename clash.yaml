@@ -8,71 +8,66 @@ proxy-groups:
   - name: Emby
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: Emby|自建|实验|TEST|0.1|0.2
   - name: GitHub
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: 自建|实验|TEST|0.1|0.2
   - name: Netflix
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|TEST|0.1|0.2
   - name: Steam
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|TEST|0.1|0.2
   - name: YouTube
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|TEST|0.1|0.2
   - name: EU
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
   - name: HK
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: 🇭🇰
   - name: JP
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: 🇯🇵
   - name: US
     type: select
     proxies:
-      - DEFAULT
+      - GLOBAL
       - DIRECT
     include-all: true
     filter: 🇺🇸
-  - name: DEFAULT
-    type: select
-    proxies:
-      - DIRECT
-    include-all: true
 
 rule-providers:
   category-ads-all:
@@ -181,4 +176,4 @@ rules:
   - "RULE-SET,iphk,HK"
   - "RULE-SET,ipjp,JP"
   - "RULE-SET,ipus,US"
-  - "MATCH,DEFAULT"
+  - "MATCH,GLOBAL"
