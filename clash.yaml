@@ -8,7 +8,7 @@ proxy-groups:
   - name: Emby
     type: select
     proxies:
-      - (Emby|自建|实验|日用|福利|TEST|0.1x|0.2x)
+      - filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
       - GLOBAL
       - DIRECT
   - name: GitHub
