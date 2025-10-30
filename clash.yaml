@@ -118,6 +118,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  emby:
+    url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
+    path: ./ruleset/emby.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   github:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml
     path: ./ruleset/github.yaml
@@ -149,28 +156,28 @@ rule-providers:
   ipcn:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml
     path: ./ruleset/ipcn.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  ipus:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/us.yaml
-    path: ./ruleset/ipus.yaml
-    behavior: domain
+    behavior: ipcidr
     interval: 86400
     format: yaml
     type: http
   iphk:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/hk.yaml
     path: ./ruleset/iphk.yaml
-    behavior: domain
+    behavior: ipcidr
     interval: 86400
     format: yaml
     type: http
   ipjp:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/jp.yaml
     path: ./ruleset/ipjp.yaml
-    behavior: domain
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  ipus:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/us.yaml
+    path: ./ruleset/ipus.yaml
+    behavior: ipcidr
     interval: 86400
     format: yaml
     type: http
@@ -188,6 +195,13 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
+  turtlewow:
+    url: https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.list
+    path: ./ruleset/turtlewow.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   youtube:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml
     path: ./ruleset/youtube.yaml
@@ -198,20 +212,6 @@ rule-providers:
   youtubemusic:
     url: https://raw.githubusercontent.com/yahngming/rules/master/youtubemusic.list
     path: ./ruleset/youtubemusic.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  emby:
-    url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
-    path: ./ruleset/emby.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  turtlewow:
-    url: https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.list
-    path: ./ruleset/turtlewow.list
     behavior: classical
     interval: 86400
     format: text
