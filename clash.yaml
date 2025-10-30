@@ -5,6 +5,10 @@ log-level: warning
 external-controller: 127.0.0.1:9090
 
 proxy-groups:
+  - name: 奈飞节点
+    include-all: true
+    filter: (?i)NF|奈飞|解锁|Netflix|NETFLIX|实验
+    type: select
   - name: 网易音乐
     type: select
     include-all: true
