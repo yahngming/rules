@@ -8,7 +8,7 @@ proxy-groups:
   - name: 网易音乐
     type: select
     include-all: true
-    filter: (?i)网易|音乐|NetEase|Music
+    filter: (?i)网易|音乐|实验
     proxies:
       - GLOBAL
       - DIRECT
