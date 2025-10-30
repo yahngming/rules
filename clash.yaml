@@ -7,41 +7,65 @@ external-controller: 127.0.0.1:9090
 proxy-groups:
   - name: Emby
     type: select
-    include-all: true
-    filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
     proxies:
       - DEFAULT
       - DIRECT
+    include-all: true
+    filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: GitHub
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: Netflix
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: Steam
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: YouTube
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|日用|福利|TEST|0.1x|0.2x
   - name: EU
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
   - name: HK
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 🇭🇰
   - name: JP
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 🇯🇵
   - name: US
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 🇺🇸
   - name: DEFAULT
