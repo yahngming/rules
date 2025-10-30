@@ -1,0 +1,8 @@
+proxy-groups:
+  - name: Emby
+    type: select
+    include-all: true
+    filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
+    proxies:
+      - GLOBAL
+      - DIRECT
