@@ -6,3 +6,64 @@ proxy-groups:
     proxies:
       - GLOBAL
       - DIRECT
+  - name: GitHub
+    type: select
+    include-all: true
+    filter: 自建|实验|日用|福利|TEST|0.1x|0.2x
+    proxies:
+      - GLOBAL
+      - DIRECT
+  - name: Netflix
+    type: select
+    include-all: true
+    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
+    proxies:
+      - GLOBAL
+      - DIRECT
+  - name: Steam
+    type: select
+    include-all: true
+    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
+    proxies:
+      - GLOBAL
+      - DIRECT
+  - name: YouTube
+    type: select
+    include-all: true
+    filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|日用|福利|TEST|0.1x|0.2x
+    proxies:
+      - GLOBAL
+      - DIRECT
+  - name: EU
+    type: select
+    include-all: true
+    filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
+    proxies:
+      - GLOBAL
+      - DIRECT
+  - name: HK
+    type: select
+    include-all: true
+    filter: 🇭🇰
+    proxies:
+      - GLOBAL
+      - DIRECT
+  - name: JP
+    type: select
+    include-all: true
+    filter: 🇯🇵
+    proxies:
+      - GLOBAL
+      - DIRECT
+  - name: US
+    type: select
+    include-all: true
+    filter: 🇺🇸
+    proxies:
+      - GLOBAL
+      - DIRECT
+  - name: GLOBAL
+    type: select
+    include-all: true
+    proxies:
+      - DIRECT
