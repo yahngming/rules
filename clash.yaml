@@ -195,9 +195,9 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  YouTubeMusic:
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTubeMusic.list
-    path: ./ruleset/YouTubeMusic.list
+  youtubemusic:
+    url: https://raw.githubusercontent.com/yahngming/rules/master/youtubemusic.list
+    path: ./ruleset/youtubemusic.list
     behavior: classical
     interval: 86400
     format: text
@@ -222,19 +222,21 @@ rules:
   - "RULE-SET,BanEasyList,REJECT"
   - "RULE-SET,BanEasyListChina,REJECT"
   - "RULE-SET,BanEasyPrivacy,REJECT"
-  - "RULE-SET,BanProgramAD,🍃 应用净化"
+  - "RULE-SET,BanProgramAD,REJECT"
   - "RULE-SET,emby,Emby"
   - "RULE-SET,github,GitHub"
-  - "RULE-SET,Steam,Steam"
-  - "RULE-SET,YouTube,YouTube"
-  - "RULE-SET,google,US"
-  - "RULE-SET,YouTubeMusic,US"
+  - "RULE-SET,steam,Steam"
+  - "RULE-SET,youtube,YouTube"
   - "RULE-SET,turtlewow,EU"
-  - "RULE-SET,Netflix,Netflix"
+  - "RULE-SET,hkip,HK"
+  - "RULE-SET,jpip,JP"
+  - "RULE-SET,usip,US"
+  - "RULE-SET,google,US"
+  - "RULE-SET,youtubemusic,US"
+  - "RULE-SET,netflix,Netflix"
   - "RULE-SET,private,DIRECT"
   - "RULE-SET,cn,DIRECT"
   - "RULE-SET,cnip,DIRECT"
   - "RULE-SET,SteamCN,DIRECT"
   - "RULE-SET,Download,DIRECT"
-  - "GEOIP,CN,DIRECT"
   - "MATCH,GLOBAL"
