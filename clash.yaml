@@ -184,6 +184,9 @@ rule-providers:
 
 rules:
   - "RULE-SET,category-ads-all,REJECT"
+  - "RULE-SET,cn,DIRECT"
+  - "RULE-SET,ipcn,DIRECT"
+  - "RULE-SET,private,DIRECT"
   - "RULE-SET,emby,Emby"
   - "RULE-SET,github,GitHub"
   - "RULE-SET,netflix,Netflix"
@@ -193,9 +196,4 @@ rules:
   - "RULE-SET,iphk,HK"
   - "RULE-SET,ipjp,JP"
   - "RULE-SET,ipus,US"
-  - "RULE-SET,google,US"
-  - "RULE-SET,youtubemusic,US"
-  - "RULE-SET,cn,DIRECT"
-  - "RULE-SET,ipcn,DIRECT"
-  - "RULE-SET,private,DIRECT"
   - "MATCH,GLOBAL"
