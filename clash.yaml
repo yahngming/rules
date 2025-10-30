@@ -8,15 +8,9 @@ proxy-groups:
   - name: Emby
     type: select
     filter: Emby|自建|实验|日用|福利|TEST|0.1x|0.2x
-    proxies:
-      - GLOBAL
-      - DIRECT
   - name: GitHub
     type: select
-    filter: 自建|实验|日用|福利|TEST|0.1x|0.2x
-    proxies:
-      - GLOBAL
-      - DIRECT
+    filter: 自建|实验|日用|福利|TEST|0.1x|0.2x|GLOBAL|DIRECT
   - name: Netflix
     type: select
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|日用|福利|TEST|0.1x|0.2x
@@ -62,8 +56,6 @@ proxy-groups:
   - name: GLOBAL
     type: select
     include-all: true
-    proxies:
-      - DIRECT
 
 rule-providers:
   category-ads-all:
