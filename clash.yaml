@@ -97,13 +97,6 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  google:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml
-    path: ./ruleset/google.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
   private:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
     path: ./ruleset/private.yaml
@@ -173,13 +166,6 @@ rule-providers:
     behavior: domain
     interval: 86400
     format: yaml
-    type: http
-  youtubemusic:
-    url: https://raw.githubusercontent.com/yahngming/rules/master/youtubemusic.list
-    path: ./ruleset/youtubemusic.list
-    behavior: classical
-    interval: 86400
-    format: text
     type: http
 
 rules:
