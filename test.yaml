@@ -33,11 +33,11 @@ proxy-groups:
 
 rule-providers:
   category-ads-all:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.yaml
-    path: ./ruleset/category-ads-all.yaml
-    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list
+    path: ./ruleset/category-ads-all.list
+    behavior: classical
     interval: 86400
-    format: yaml
+    format: text
     type: http
 
 rules:
