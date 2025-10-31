@@ -3,6 +3,7 @@ allow-lan: true
 mode: rule
 log-level: warning
 external-controller: 127.0.0.1:9090
+external-ui: ui
 
 proxy-groups:
   - name: Emby
