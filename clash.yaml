@@ -74,8 +74,16 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  white:
+    url: https://raw.githubusercontent.com/yahngming/rules/refs/heads/master/white.list
+    path: ./ruleset/white.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,emby,Emby"
+  - "RULE-SET,white,GitHub"
   - "RULE-SET,turtlewow,EU"
   - "MATCH,DEFAULT"
