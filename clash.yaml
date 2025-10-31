@@ -118,27 +118,6 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  iphk:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/hk.yaml
-    path: ./ruleset/iphk.yaml
-    behavior: ipcidr
-    interval: 86400
-    format: yaml
-    type: http
-  ipjp:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/jp.yaml
-    path: ./ruleset/ipjp.yaml
-    behavior: ipcidr
-    interval: 86400
-    format: yaml
-    type: http
-  ipus:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/us.yaml
-    path: ./ruleset/ipus.yaml
-    behavior: ipcidr
-    interval: 86400
-    format: yaml
-    type: http
   netflix:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml
     path: ./ruleset/netflix.yaml
@@ -179,7 +158,4 @@ rules:
   - "RULE-SET,steam,Steam"
   - "RULE-SET,youtube,YouTube"
   - "RULE-SET,turtlewow,EU"
-  - "RULE-SET,iphk,HK"
-  - "RULE-SET,ipjp,JP"
-  - "RULE-SET,ipus,US"
   - "MATCH,DEFAULT"
