@@ -1,42 +1,62 @@
 proxy-groups:
   - name: Emby
     type: select
+    proxies:
+      - DIRECT
     include-all: true
-    filter: Emby|自建|实验|TEST|0.1|0.2
+    filter: Emby|自建|实验|直连|TEST
   - name: GitHub
     type: select
+    proxies:
+      - DIRECT
     include-all: true
-    filter: 自建|实验|TEST|0.1|0.2
+    filter: 自建|实验|直连|TEST
   - name: Netflix
     type: select
+    proxies:
+      - DIRECT
     include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|TEST|0.1|0.2
+    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|直连|TEST
   - name: Steam
     type: select
+    proxies:
+      - DIRECT
     include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|TEST|0.1|0.2
+    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|直连|TEST
   - name: YouTube
     type: select
+    proxies:
+      - DIRECT
     include-all: true
-    filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|TEST|0.1|0.2
+    filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|直连|TEST
   - name: EU
     type: select
+    proxies:
+      - DIRECT
     include-all: true
     filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
   - name: HK
     type: select
+    proxies:
+      - DIRECT
     include-all: true
     filter: 🇭🇰
   - name: JP
     type: select
+    proxies:
+      - DIRECT
     include-all: true
     filter: 🇯🇵
   - name: US
     type: select
+    proxies:
+      - DIRECT
     include-all: true
     filter: 🇺🇸
   - name: DEFAULT
     type: select
+    proxies:
+      - DIRECT
     include-all: true
 
 rule-providers:
