@@ -60,14 +60,22 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
-  LocalAreaNetwork:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
-    path: ./ruleset/LocalAreaNetwork.list
+  emby:
+    url: https://raw.githubusercontent.com/yahngming/rules/refs/heads/master/emby.list
+    path: ./ruleset/emby.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  turtlewow:
+    url: https://raw.githubusercontent.com/yahngming/rules/refs/heads/master/turtlewow.list
+    path: ./ruleset/turtlewow.list
     behavior: classical
     interval: 86400
     format: text
     type: http
 
 rules:
-  - "RULE-SET,LocalAreaNetwork,DIRECT"
+  - "RULE-SET,emby,Emby"
+  - "RULE-SET,turtlewow,EU"
   - "MATCH,DEFAULT"
