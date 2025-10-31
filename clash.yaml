@@ -1,129 +1,73 @@
 proxy-groups:
   - name: Emby
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: Emby|自建|实验|直连|TEST
+    proxies:
+      - DIRECT
   - name: GitHub
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: 自建|实验|直连|TEST
+    proxies:
+      - DIRECT
   - name: Netflix
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|直连|TEST
+    proxies:
+      - DIRECT
   - name: Steam
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|直连|TEST
+    proxies:
+      - DIRECT
   - name: YouTube
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|直连|TEST
+    proxies:
+      - DIRECT
   - name: EU
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
+    proxies:
+      - DIRECT
   - name: HK
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: 🇭🇰
+    proxies:
+      - DIRECT
   - name: JP
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: 🇯🇵
+    proxies:
+      - DIRECT
   - name: US
     type: select
-    proxies:
-      - DIRECT
     include-all: true
     filter: 🇺🇸
-  - name: DEFAULT
-    type: select
     proxies:
       - DIRECT
+  - name: DEFAULT
+    type: select
     include-all: true
+    proxies:
+      - DIRECT
 
 rule-providers:
   category-ads-all:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.yaml
-    path: ./ruleset/category-ads-all.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  emby:
-    url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
-    path: ./ruleset/emby.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list
+    path: ./ruleset/category-ads-all.list
     behavior: classical
     interval: 86400
     format: text
-    type: http
-  github:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml
-    path: ./ruleset/github.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  cn:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml
-    path: ./ruleset/cn.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  netflix:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml
-    path: ./ruleset/netflix.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  steam:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.yaml
-    path: ./ruleset/steam.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  turtlewow:
-    url: https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.list
-    path: ./ruleset/turtlewow.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  youtube:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml
-    path: ./ruleset/youtube.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
     type: http
 
 rules:
   - "RULE-SET,category-ads-all,REJECT"
-  - "RULE-SET,cn,DIRECT"
-  - "RULE-SET,emby,Emby"
-  - "RULE-SET,github,GitHub"
-  - "RULE-SET,netflix,Netflix"
-  - "RULE-SET,steam,Steam"
-  - "RULE-SET,youtube,YouTube"
-  - "RULE-SET,turtlewow,EU"
   - "MATCH,DEFAULT"
