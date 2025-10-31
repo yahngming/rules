@@ -97,24 +97,10 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  private:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
-    path: ./ruleset/private.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
   cn:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml
     path: ./ruleset/cn.yaml
     behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  ipcn:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml
-    path: ./ruleset/ipcn.yaml
-    behavior: ipcidr
     interval: 86400
     format: yaml
     type: http
@@ -150,8 +136,6 @@ rule-providers:
 rules:
   - "RULE-SET,category-ads-all,REJECT"
   - "RULE-SET,cn,DIRECT"
-  - "RULE-SET,ipcn,DIRECT"
-  - "RULE-SET,private,DIRECT"
   - "RULE-SET,emby,Emby"
   - "RULE-SET,github,GitHub"
   - "RULE-SET,netflix,Netflix"
