@@ -61,37 +61,53 @@ proxy-groups:
 
 rule-providers:
   emby:
-    url: https://raw.githubusercontent.com/yahngming/rules/refs/heads/master/emby.list
+    type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
     path: ./ruleset/emby.list
-    behavior: classical
     interval: 86400
-    format: text
-    type: http
   turtlewow:
-    url: https://raw.githubusercontent.com/yahngming/rules/refs/heads/master/turtlewow.list
+    type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.list
     path: ./ruleset/turtlewow.list
-    behavior: classical
     interval: 86400
-    format: text
-    type: http
   white:
-    url: https://raw.githubusercontent.com/yahngming/rules/refs/heads/master/white.list
-    path: ./ruleset/white.list
-    behavior: classical
-    interval: 86400
-    format: text
     type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/white.list
+    path: ./ruleset/white.list
+    interval: 86400
+  cnip:
+    type: http
+    format: mrs
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
+    path: ./ruleset/cnip.mrs
+    interval: 86400
+  cn:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+    path: ./ruleset/cn.mrs
+    interval: 86400
+  netflix:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
+    path: ./ruleset/netflix.mrs
+    interval: 86400
 
 rules:
   - RULE-SET,emby,Emby
   - RULE-SET,white,GitHub
+  - RULE-SET,netflix,Netflix
   - RULE-SET,turtlewow,EU
-  - GEOIP,CN,DIRECT
-  - GEOIP,PRIVATE,DIRECT
-  - GEOSITE,CN,DIRECT
-  - GEOSITE,PRIVATE,DIRECT
-  - GEOSITE,GITHUB,GitHub
-  - GEOSITE,NETFLIX,Netflix
-  - GEOSITE,STEAM,Steam
-  - GEOSITE,YOUTUBE,YouTube
+  - RULE-SET,cn,DIRECT
+  - RULE-SET,cnip,DIRECT
   - MATCH,DEFAULT
