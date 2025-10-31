@@ -1,8 +1,11 @@
 proxy-groups:
+  - name: DEFAULT
+    include-all: true
+    type: select
   - name: Emby
     type: select
     include-all: true
-    filter: Emby|自建|实验|直连|TEST
+    filter: 自建|实验|直连|TEST
     proxies:
       - DIRECT
   - name: GitHub
@@ -14,60 +17,31 @@ proxy-groups:
   - name: Netflix
     type: select
     include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|直连|TEST
+    filter: 自建|实验|直连|TEST
     proxies:
       - DIRECT
   - name: Steam
     type: select
     include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|直连|TEST
+    filter: 自建|实验|直连|TEST
     proxies:
       - DIRECT
   - name: YouTube
     type: select
     include-all: true
-    filter: 🇦🇷|🇮🇳|🇳🇬|自建|实验|直连|TEST
-    proxies:
-      - DIRECT
-  - name: EU
-    type: select
-    include-all: true
-    filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
-    proxies:
-      - DIRECT
-  - name: HK
-    type: select
-    include-all: true
-    filter: 🇭🇰
-    proxies:
-      - DIRECT
-  - name: JP
-    type: select
-    include-all: true
-    filter: 🇯🇵
-    proxies:
-      - DIRECT
-  - name: US
-    type: select
-    include-all: true
-    filter: 🇺🇸
-    proxies:
-      - DIRECT
-  - name: DEFAULT
-    type: select
-    include-all: true
+    filter: 自建|实验|直连|TEST
     proxies:
       - DIRECT
 
 rule-providers:
-  category-ads-all:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list
-    path: ./ruleset/category-ads-all.list
+  LocalAreaNetwork:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
+    path: ./ruleset/LocalAreaNetwork.list
     behavior: classical
     interval: 86400
     format: text
     type: http
 
 rules:
-  - "RULE-SET,category-ads-all,REJECT"
+  - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "MATCH,DEFAULT"
