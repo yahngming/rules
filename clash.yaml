@@ -60,6 +60,13 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
+  category-ads-all:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
+    path: ./ruleset/category-ads-all.mrs
+    interval: 86400
   cn:
     type: http
     format: mrs
@@ -81,12 +88,33 @@ rule-providers:
     url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
     path: ./ruleset/emby.list
     interval: 86400
+  github:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
+    path: ./ruleset/github.mrs
+    interval: 86400
   netflix:
     type: http
     format: mrs
     behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
     path: ./ruleset/netflix.mrs
+    interval: 86400
+  private:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
+    path: ./ruleset/private.mrs
+    interval: 86400
+  steam:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs
+    path: ./ruleset/steam.mrs
     interval: 86400
   turtlewow:
     type: http
@@ -102,12 +130,32 @@ rule-providers:
     url: https://raw.githubusercontent.com/yahngming/rules/master/white.list
     path: ./ruleset/white.list
     interval: 86400
+  youtube:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
+    path: ./ruleset/youtube.mrs
+    interval: 86400
+  youtubemusic:
+    type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/youtubemusic.list
+    path: ./ruleset/youtubemusic.list
+    interval: 86400
 
 rules:
+  - RULE-SET,category-ads-all,REJECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,cnip,DIRECT
+  - RULE-SET,cn,DIRECT
   - RULE-SET,emby,Emby
+  - RULE-SET,github,GitHub
   - RULE-SET,white,GitHub
   - RULE-SET,netflix,Netflix
+  - RULE-SET,steam,Steam
+  - RULE-SET,youtube,YouTube
   - RULE-SET,turtlewow,EU
-  - RULE-SET,cn,DIRECT
-  - RULE-SET,cnip,DIRECT
+  - RULE-SET,youtubemusic,US
   - MATCH,DEFAULT
