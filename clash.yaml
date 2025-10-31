@@ -60,12 +60,33 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
+  cn:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+    path: ./ruleset/cn.mrs
+    interval: 86400
+  cnip:
+    type: http
+    format: mrs
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
+    path: ./ruleset/cnip.mrs
+    interval: 86400
   emby:
     type: http
     format: text
     behavior: classical
     url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
     path: ./ruleset/emby.list
+    interval: 86400
+  netflix:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
+    path: ./ruleset/netflix.mrs
     interval: 86400
   turtlewow:
     type: http
@@ -80,27 +101,6 @@ rule-providers:
     behavior: classical
     url: https://raw.githubusercontent.com/yahngming/rules/master/white.list
     path: ./ruleset/white.list
-    interval: 86400
-  cnip:
-    type: http
-    format: mrs
-    behavior: ipcidr
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
-    path: ./ruleset/cnip.mrs
-    interval: 86400
-  cn:
-    type: http
-    format: mrs
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
-    path: ./ruleset/cn.mrs
-    interval: 86400
-  netflix:
-    type: http
-    format: mrs
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
-    path: ./ruleset/netflix.mrs
     interval: 86400
 
 rules:
