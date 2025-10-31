@@ -60,14 +60,14 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
-  LocalAreaNetwork:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
-    path: ./ruleset/LocalAreaNetwork.list
+  private:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.list
+    path: ./ruleset/private.list
     behavior: classical
     interval: 86400
     format: text
     type: http
 
 rules:
-  - "RULE-SET,LocalAreaNetwork,DIRECT"
+  - "RULE-SET,private,DIRECT"
   - "MATCH,DEFAULT"
