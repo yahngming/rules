@@ -3,43 +3,39 @@ proxy-groups:
     include-all: true
     type: select
   - name: YouTube
+    type: select
     include-all: true
     filter: 自建|实验|直连|TEST
-    type: select
     proxies:
-      - DEFAULT
       - DIRECT
   - name: Netflix
+    type: select
     include-all: true
     filter: 自建|实验|直连|TEST
-    type: select
     proxies:
-      - DEFAULT
       - DIRECT
   - name: Steam
+    type: select
     include-all: true
     filter: 自建|实验|直连|TEST
-    type: select
     proxies:
-      - DEFAULT
       - DIRECT
   - name: GitHub
+    type: select
     include-all: true
     filter: 自建|实验|直连|TEST
-    type: select
     proxies:
-      - DEFAULT
       - DIRECT
 
 rule-providers:
-  category-ads-all:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list
-    path: ./ruleset/category-ads-all.list
+  LocalAreaNetwork:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
+    path: ./ruleset/LocalAreaNetwork.list
     behavior: classical
     interval: 86400
     format: text
     type: http
 
 rules:
-  - "RULE-SET,category-ads-all,REJECT"
+  - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "MATCH,DEFAULT"
