@@ -1,7 +1,4 @@
 proxy-groups:
-  - name: DEFAULT
-    include-all: true
-    type: select
   - name: Emby
     type: select
     include-all: true
@@ -30,6 +27,35 @@ proxy-groups:
     type: select
     include-all: true
     filter: 自建|实验|直连|TEST
+    proxies:
+      - DIRECT
+  - name: EU
+    type: select
+    include-all: true
+    filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
+    proxies:
+      - DIRECT
+  - name: HK
+    type: select
+    include-all: true
+    filter: 🇭🇰
+    proxies:
+      - DIRECT
+  - name: JP
+    type: select
+    include-all: true
+    filter: 🇯🇵
+    proxies:
+      - DIRECT
+  - name: US
+    type: select
+    include-all: true
+    filter: 🇺🇸
+    proxies:
+      - DIRECT
+  - name: DEFAULT
+    include-all: true
+    type: select
     proxies:
       - DIRECT
 
