@@ -83,7 +83,15 @@ rule-providers:
     type: http
 
 rules:
-  - "RULE-SET,emby,Emby"
-  - "RULE-SET,white,GitHub"
-  - "RULE-SET,turtlewow,EU"
-  - "MATCH,DEFAULT"
+  - RULE-SET,emby,Emby
+  - RULE-SET,white,GitHub
+  - RULE-SET,turtlewow,EU
+  - GEOIP,CN,DIRECT
+  - GEOIP,PRIVATE,DIRECT
+  - GEOSITE,CN,DIRECT
+  - GEOSITE,PRIVATE,DIRECT
+  - GEOSITE,GITHUB,GitHub
+  - GEOSITE,NETFLIX,Netflix
+  - GEOSITE,STEAM,Steam
+  - GEOSITE,YOUTUBE,YouTube
+  - MATCH,DEFAULT
