@@ -11,54 +11,63 @@ proxy-groups:
     include-all: true
     filter: 自建|实验|直连|TEST
     proxies:
+      - DEFAULT
       - DIRECT
   - name: GitHub
     type: select
     include-all: true
     filter: 自建|实验|直连|TEST
     proxies:
+      - DEFAULT
       - DIRECT
   - name: Netflix
     type: select
     include-all: true
     filter: 自建|实验|直连|TEST
     proxies:
+      - DEFAULT
       - DIRECT
   - name: Steam
     type: select
     include-all: true
     filter: 自建|实验|直连|TEST
     proxies:
+      - DEFAULT
       - DIRECT
   - name: YouTube
     type: select
     include-all: true
     filter: 自建|实验|直连|TEST
     proxies:
+      - DEFAULT
       - DIRECT
   - name: EU
     type: select
     include-all: true
     filter: 🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧
     proxies:
+      - DEFAULT
       - DIRECT
   - name: HK
     type: select
     include-all: true
     filter: 🇭🇰
     proxies:
+      - DEFAULT
       - DIRECT
   - name: JP
     type: select
     include-all: true
     filter: 🇯🇵
     proxies:
+      - DEFAULT
       - DIRECT
   - name: US
     type: select
     include-all: true
     filter: 🇺🇸
     proxies:
+      - DEFAULT
       - DIRECT
   - name: DEFAULT
     include-all: true
