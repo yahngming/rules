@@ -82,54 +82,63 @@
     {
       "tag": "emby",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
     {
       "tag": "github",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
     {
       "tag": "netflix",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
     {
       "tag": "steam",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
     {
       "tag": "youtube",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
     {
       "tag": "eu",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
     {
       "tag": "hk",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
     {
       "tag": "jp",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
     {
       "tag": "us",
       "type": "selector",
+      "outbounds": [],
       "use_all_providers": true,
       "includes": "自建|实验|直连|TEST"
     },
