@@ -82,7 +82,7 @@
     {
       "tag": "emby",
       "type": "selector",
-      "include": "自建|直连|实验|TEST"
+      "includes": "自建|直连|实验|TEST"
     },
     {
       "tag": "github",
