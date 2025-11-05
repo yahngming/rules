@@ -1,6 +1,7 @@
 {
   "log": {
-    "level": "warn"
+    "level": "warn",
+    "timestamp": true
   },
   "dns": {
     "servers": [
