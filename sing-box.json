@@ -78,6 +78,46 @@
     {
       "tag": "direct",
       "type": "direct"
+    },
+    {
+      "tag": "emby",
+      "type": "selector"
+    },
+    {
+      "tag": "github",
+      "type": "selector"
+    },
+    {
+      "tag": "netflix",
+      "type": "selector"
+    },
+    {
+      "tag": "steam",
+      "type": "selector"
+    },
+    {
+      "tag": "youtube",
+      "type": "selector"
+    },
+    {
+      "tag": "eu",
+      "type": "selector"
+    },
+    {
+      "tag": "hk",
+      "type": "selector"
+    },
+    {
+      "tag": "jp",
+      "type": "selector"
+    },
+    {
+      "tag": "us",
+      "type": "selector"
+    },
+    {
+      "tag": "default",
+      "type": "selector"
     }
   ],
   "route": {
@@ -118,10 +158,6 @@
         "outbound": "github"
       },
       {
-        "rule_set": "google",
-        "outbound": "us"
-      },
-      {
         "rule_set": "netflix",
         "outbound": "netflix"
       },
@@ -132,6 +168,10 @@
       {
         "rule_set": "youtube",
         "outbound": "youtube"
+      },
+      {
+        "rule_set": "google",
+        "outbound": "us"
       }
     ],
     "rule_set": [
