@@ -82,55 +82,46 @@
     {
       "tag": "emby",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
       "tag": "github",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
       "tag": "netflix",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
       "tag": "steam",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
       "tag": "youtube",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
       "tag": "eu",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
       "tag": "hk",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
       "tag": "jp",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
       "tag": "us",
       "type": "selector",
-      "outbounds": [],
       "use_all_providers": true
     },
     {
