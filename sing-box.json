@@ -225,6 +225,11 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
       },
       {
+        "tag": "politics",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/politics.json"
+      },
+      {
         "tag": "roku",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-roku.srs"
