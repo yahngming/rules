@@ -4,6 +4,48 @@ mode: rule
 log-level: warning
 external-controller: 127.0.0.1:9090
 external-ui: ui
+unified-delay: true
+tcp-concurrent: true
+dns:
+  enable: true
+  use-hosts: true
+  use-system-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  respect-rules: true
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  proxy-server-nameserver:
+    - 119.29.29.29
+    - 114.114.114.114
+  nameserver-policy:
+    "rule-set:cnsite":
+    - 119.29.29.29
+    - 114.114.114.114
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localhost"
+    - "*.localdomain"
+    - "*.home.arpa"
+    - "*.invalid"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "+.pool.ntp.org"
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.edu.cn"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "ntp.*.com"
+    - "*.ntp.org.cn"
+    - "*.time.edu.cn"
+    - "+.stun"
+    - turn.cloudflare.com
+    - "+.rustdesk.com"
+    - "lens.l.google.com"
+    - "rule-set:cnsite"
 
 proxy-groups:
   - name: Emby
@@ -83,19 +125,19 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
     path: ./ruleset/category-ads-all.mrs
     interval: 86400
-  cn:
-    type: http
-    format: mrs
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
-    path: ./ruleset/cn.mrs
-    interval: 86400
   cnip:
     type: http
     format: mrs
     behavior: ipcidr
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
     path: ./ruleset/cnip.mrs
+    interval: 86400
+  cnsite:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+    path: ./ruleset/cn.mrs
     interval: 86400
   emby:
     type: http
@@ -165,7 +207,7 @@ rules:
   - RULE-SET,category-ads-all,REJECT
   - RULE-SET,private,DIRECT
   - RULE-SET,cnip,DIRECT
-  - RULE-SET,cn,DIRECT
+  - RULE-SET,cnsite,DIRECT
   - RULE-SET,emby,Emby
   - RULE-SET,github,GitHub
   - RULE-SET,white,GitHub
