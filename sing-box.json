@@ -78,52 +78,52 @@
     {
       "tag": "default",
       "type": "selector",
-      "outbounds": ["direct", "eco", "all"]
+      "outbounds": ["direct"]
     },
     {
       "tag": "emby",
       "type": "selector",
-      "outbounds": ["default", "direct", "eco"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "github",
       "type": "selector",
-      "outbounds": ["default", "direct", "eco"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "netflix",
       "type": "selector",
-      "outbounds": ["default", "direct", "eco"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "steam",
       "type": "selector",
-      "outbounds": ["default", "direct", "eco"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "youtube",
       "type": "selector",
-      "outbounds": ["default", "direct", "eco"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "eu",
       "type": "selector",
-      "outbounds": ["default", "direct", "eu"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "hk",
       "type": "selector",
-      "outbounds": ["default", "direct", "hk"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "jp",
       "type": "selector",
-      "outbounds": ["default", "direct", "jp"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "us",
       "type": "selector",
-      "outbounds": ["default", "direct", "us"]
+      "outbounds": ["direct", "default"]
     },
     {
       "tag": "direct",
