@@ -184,7 +184,7 @@
         "outbound": "eu"
       },
       {
-        "rule_set": ["google", "roku"]
+        "rule_set": ["ai", "google", "roku"]
         "outbound": "us"
       }
     ],
@@ -193,6 +193,11 @@
         "tag": "ads",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs"
+      },
+      {
+        "tag": "ai",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs"
       },
       {
         "tag": "cnip",
