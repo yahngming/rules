@@ -33,7 +33,7 @@
         "server": "fakeip"
       },
       {
-        "rule_set": "cnsite",
+        "rule_set": "cn",
         "server": "direct"
       },
       {
@@ -156,7 +156,7 @@
         "action": "reject"
       },
       {
-        "rule_set": ["cnip", "cnsite"],
+        "rule_set": ["cn", "ipcn"],
         "outbound": "direct"
       },
       {
@@ -200,12 +200,7 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs"
       },
       {
-        "tag": "cnip",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
-      },
-      {
-        "tag": "cnsite",
+        "tag": "cn",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs"
       },
@@ -223,6 +218,11 @@
         "tag": "google",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
+      },
+      {
+        "tag": "ipcn",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
       },
       {
         "tag": "netflix",
