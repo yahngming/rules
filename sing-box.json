@@ -184,7 +184,7 @@
         "outbound": "eu"
       },
       {
-        "rule_set": ["ai", "google", "roku", "youtubemusic"]
+        "rule_set": ["ai", "google", "roku", "youtubemusic"],
         "outbound": "us"
       }
     ],
