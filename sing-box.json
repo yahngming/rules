@@ -253,6 +253,11 @@
         "tag": "youtube",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
+      },
+      {
+        "tag": "youtubemusic",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/youtubemusic.json"
       }
     ],
     "auto_detect_interface": true,
