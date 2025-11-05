@@ -232,7 +232,7 @@
       {
         "tag": "politics",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/politics.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/politics.json"
       },
       {
         "tag": "roku",
@@ -247,7 +247,7 @@
       {
         "tag": "turtlewow",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/turtlewow.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.json"
       },
       {
         "tag": "youtube",
@@ -257,7 +257,7 @@
       {
         "tag": "youtubemusic",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/youtubemusic.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/youtubemusic.json"
       }
     ],
     "auto_detect_interface": true,
