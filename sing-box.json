@@ -156,7 +156,7 @@
         "action": "reject"
       },
       {
-        "rule_set": ["cn", "ipcn"],
+        "rule_set": ["cn", "cnip"],
         "outbound": "direct"
       },
       {
@@ -205,6 +205,11 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs"
       },
       {
+        "tag": "cnip",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+      },
+      {
         "tag": "emby",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-emby.srs"
@@ -218,11 +223,6 @@
         "tag": "google",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
-      },
-      {
-        "tag": "ipcn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
       },
       {
         "tag": "netflix",
