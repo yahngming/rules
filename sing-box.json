@@ -32,7 +32,7 @@
         "server": "fakeip"
       },
       {
-        "rule_set": "geosite-cn",
+        "rule_set": "cnsite",
         "server": "direct"
       },
       {
