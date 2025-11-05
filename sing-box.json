@@ -180,7 +180,11 @@
         "outbound": "youtube"
       },
       {
-        "rule_set": "google",
+        "rule_set": "turtlewow",
+        "outbound": "eu"
+      },
+      {
+        "rule_set": ["google", "roku"]
         "outbound": "us"
       }
     ],
@@ -219,6 +223,11 @@
         "tag": "netflix",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
+      },
+      {
+        "tag": "roku",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-roku.srs"
       },
       {
         "tag": "steam",
