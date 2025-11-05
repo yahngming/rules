@@ -20,7 +20,7 @@ dns:
     - 119.29.29.29
     - 114.114.114.114
   nameserver-policy:
-    "rule-set:cnsite":
+    "rule-set:cn":
     - 119.29.29.29
     - 114.114.114.114
   fake-ip-filter:
@@ -45,7 +45,7 @@ dns:
     - turn.cloudflare.com
     - "+.rustdesk.com"
     - "lens.l.google.com"
-    - "rule-set:cnsite"
+    - "rule-set:cn"
 
 proxy-groups:
   - name: Emby
