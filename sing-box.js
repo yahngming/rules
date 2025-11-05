@@ -11,6 +11,9 @@ const existingTags = config.outbounds.map(o => o.tag);
 proxies = proxies.filter(p => !existingTags.includes(p.tag));
 const allTags = proxies.map(p => p.tag);
 const terminalTags = proxies.filter(p => !p.detour).map(p => p.tag);
+function getTags(proxies, regex) {
+  return (regex ? proxies.filter(p => regex.test(p.tag)) : proxies).map(p => p.tag)
+}
 
 config.outbounds.push(...proxies);
 config.outbounds.map(i => {
