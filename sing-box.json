@@ -81,43 +81,53 @@
     },
     {
       "tag": "emby",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "github",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "netflix",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "steam",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "youtube",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "eu",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "hk",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "jp",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "us",
-      "type": "selector"
+      "type": "selector",
+      "includes": ["自建", "实验", "直连", "TEST"]
     },
     {
       "tag": "default",
-      "type": "selector"
+      "type": "selector",
+      "use_all_providers": true
     }
   ],
   "route": {
