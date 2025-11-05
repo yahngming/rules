@@ -1,7 +1,6 @@
 {
   "log": {
-    "level": "warn",
-    "timestamp": true
+    "level": "warn"
   },
   "dns": {
     "servers": [
@@ -76,58 +75,58 @@
   ],
   "outbounds": [
     {
-      "tag": "direct",
-      "type": "direct"
+      "tag": "default",
+      "type": "selector",
+      "outbounds": []
     },
     {
       "tag": "emby",
       "type": "selector",
-      "includes": "自建|直连|实验|TEST"
+      "outbounds": []
     },
     {
       "tag": "github",
       "type": "selector",
-      "use_all_providers": true
+      "outbounds": []
     },
     {
       "tag": "netflix",
       "type": "selector",
-      "use_all_providers": true
+      "outbounds": []
     },
     {
       "tag": "steam",
       "type": "selector",
-      "use_all_providers": true
+      "outbounds": []
     },
     {
       "tag": "youtube",
       "type": "selector",
-      "use_all_providers": true
+      "outbounds": []
     },
     {
       "tag": "eu",
       "type": "selector",
-      "use_all_providers": true
+      "outbounds": []
     },
     {
       "tag": "hk",
       "type": "selector",
-      "use_all_providers": true
+      "outbounds": []
     },
     {
       "tag": "jp",
       "type": "selector",
-      "use_all_providers": true
+      "outbounds": []
     },
     {
       "tag": "us",
       "type": "selector",
-      "use_all_providers": true
+      "outbounds": []
     },
     {
-      "tag": "default",
-      "type": "selector",
-      "use_all_providers": true
+      "tag": "direct",
+      "type": "direct"
     }
   ],
   "route": {
@@ -240,7 +239,6 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
       }
     ],
-    "final": "default",
     "auto_detect_interface": true,
     "default_domain_resolver": "direct"
   },
