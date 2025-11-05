@@ -164,7 +164,7 @@
         "outbound": "emby"
       },
       {
-        "rule_set": "github",
+        "rule_set": ["github", "politics"],
         "outbound": "github"
       },
       {
@@ -184,7 +184,7 @@
         "outbound": "eu"
       },
       {
-        "rule_set": ["ai", "google", "roku"]
+        "rule_set": ["ai", "google", "roku", "youtubemusic"]
         "outbound": "us"
       }
     ],
