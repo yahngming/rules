@@ -101,6 +101,11 @@
       "outbounds": ["direct", "default"]
     },
     {
+      "tag": "x",
+      "type": "selector",
+      "outbounds": ["direct", "default"]
+    },
+    {
       "tag": "youtube",
       "type": "selector",
       "outbounds": ["direct", "default"]
@@ -176,12 +181,20 @@
         "outbound": "steam"
       },
       {
+        "rule_set": "x",
+        "outbound": "x"
+      },
+      {
         "rule_set": "youtube",
         "outbound": "youtube"
       },
       {
         "rule_set": "turtlewow",
         "outbound": "eu"
+      },
+      {
+        "rule_set": "duolingo",
+        "outbound": "jp"
       },
       {
         "rule_set": ["ai", "google", "roku", "youtubemusic"],
@@ -208,6 +221,11 @@
         "tag": "cnip",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+      },
+      {
+        "tag": "duolingo",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-duolingo.srs"
       },
       {
         "tag": "emby",
@@ -248,6 +266,11 @@
         "tag": "turtlewow",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.json"
+      },
+      {
+        "tag": "x",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs"
       },
       {
         "tag": "youtube",
