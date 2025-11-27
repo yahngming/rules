@@ -101,11 +101,6 @@
       "outbounds": ["direct", "default"]
     },
     {
-      "tag": "x",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
       "tag": "youtube",
       "type": "selector",
       "outbounds": ["direct", "default"]
@@ -179,10 +174,6 @@
       {
         "rule_set": "steam",
         "outbound": "steam"
-      },
-      {
-        "rule_set": "x",
-        "outbound": "x"
       },
       {
         "rule_set": "youtube",
@@ -266,11 +257,6 @@
         "tag": "turtlewow",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.json"
-      },
-      {
-        "tag": "x",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs"
       },
       {
         "tag": "youtube",
