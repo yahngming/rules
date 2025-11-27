@@ -76,6 +76,13 @@ proxy-groups:
     proxies:
       - DEFAULT
       - DIRECT
+  - name: X
+    type: select
+    include-all: true
+    filter: 自建|实验|直连|TEST
+    proxies:
+      - DEFAULT
+      - DIRECT
   - name: YouTube
     type: select
     include-all: true
@@ -139,6 +146,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
     path: ./ruleset/cnip.mrs
     interval: 86400
+  duolingo:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/duolingo.mrs
+    path: ./ruleset/duolingo.mrs
+    interval: 86400
   emby:
     type: http
     format: text
@@ -188,6 +202,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/yahngming/rules/master/white.list
     path: ./ruleset/white.list
     interval: 86400
+  x:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs
+    path: ./ruleset/x.mrs
+    interval: 86400
   youtube:
     type: http
     format: mrs
@@ -213,7 +234,9 @@ rules:
   - RULE-SET,white,GitHub
   - RULE-SET,netflix,Netflix
   - RULE-SET,steam,Steam
+  - RULE-SET,x,X
   - RULE-SET,youtube,YouTube
   - RULE-SET,turtlewow,EU
+  - RULE-SET,duolingo,JP
   - RULE-SET,youtubemusic,US
   - MATCH,DEFAULT
