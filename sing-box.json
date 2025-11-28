@@ -152,7 +152,7 @@
         "outbound": "default"
       },
       {
-        "rule_set": "ads",
+        "rule_set": ["ads"],
         "action": "reject"
       },
       {
@@ -160,7 +160,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "emby",
+        "rule_set": ["emby"],
         "outbound": "emby"
       },
       {
@@ -168,23 +168,23 @@
         "outbound": "github"
       },
       {
-        "rule_set": "netflix",
+        "rule_set": ["netflix"],
         "outbound": "netflix"
       },
       {
-        "rule_set": "steam",
+        "rule_set": ["steam"],
         "outbound": "steam"
       },
       {
-        "rule_set": "youtube",
+        "rule_set": ["youtube"],
         "outbound": "youtube"
       },
       {
-        "rule_set": "turtlewow",
+        "rule_set": ["turtlewow"],
         "outbound": "eu"
       },
       {
-        "rule_set": "duolingo",
+        "rule_set": ["duolingo"],
         "outbound": "jp"
       },
       {
