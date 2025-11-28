@@ -33,18 +33,10 @@ dns:
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - "+.pool.ntp.org"
+    - "+.stun"
+    - "ntp.*.com"
     - "time.*.com"
     - "time.*.gov"
-    - "time.*.edu.cn"
-    - "time.*.apple.com"
-    - "time-ios.apple.com"
-    - "ntp.*.com"
-    - "*.ntp.org.cn"
-    - "*.time.edu.cn"
-    - "+.stun"
-    - turn.cloudflare.com
-    - "+.rustdesk.com"
-    - "lens.l.google.com"
     - "rule-set:cn"
 
 proxy-groups:
