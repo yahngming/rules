@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "epdg.epc.mnc240.mcc310.pub.3gppnetwork.org",
+        "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org",
+        "ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org",
+        "ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org",
+        "t-mobile.com"
+      ]
+    }
+  ]
+}
