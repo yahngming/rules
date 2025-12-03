@@ -103,7 +103,7 @@ proxy-groups:
     proxies:
       - DEFAULT
       - DIRECT
-  - name: UNBAN
+  - name: WHITE
     type: select
     include-all: true
     filter: 自建|实验|直连|TEST
@@ -215,12 +215,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.list
     path: ./ruleset/turtlewow.list
     interval: 86400
-  unban:
+  white:
     type: http
     format: text
     behavior: classical
-    url: https://raw.githubusercontent.com/yahngming/rules/master/unban.list
-    path: ./ruleset/unban.list
+    url: https://raw.githubusercontent.com/yahngming/rules/master/white.list
+    path: ./ruleset/white.list
     interval: 86400
   youtube:
     type: http
@@ -238,7 +238,7 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,unban,UNBAN
+  - RULE-SET,white,WHITE
   - RULE-SET,category-ads-all,REJECT
   - RULE-SET,cn,DIRECT
   - RULE-SET,cnip,DIRECT
