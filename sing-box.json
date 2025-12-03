@@ -81,6 +81,11 @@
       "outbounds": ["direct"]
     },
     {
+      "tag": "white",
+      "type": "selector",
+      "outbounds": ["direct", "default"]
+    },
+    {
       "tag": "emby",
       "type": "selector",
       "outbounds": ["direct", "default"]
@@ -92,11 +97,6 @@
     },
     {
       "tag": "netflix",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
-      "tag": "politics",
       "type": "selector",
       "outbounds": ["direct", "default"]
     },
@@ -157,15 +157,15 @@
         "outbound": "default"
       },
       {
-        "rule_set": ["google-ads"],
-        "action": "default"
+        "rule_set": ["white"],
+        "action": "white"
       },
       {
         "rule_set": ["ads"],
         "action": "reject"
       },
       {
-        "rule_set": ["api", "cn", "cnip"],
+        "rule_set": ["cn", "cnip", "direct"],
         "outbound": "direct"
       },
       {
@@ -181,10 +181,6 @@
         "outbound": "netflix"
       },
       {
-        "rule_set": ["politics"],
-        "outbound": "politics"
-      },
-      {
         "rule_set": ["steam"],
         "outbound": "steam"
       },
@@ -195,14 +191,6 @@
       {
         "rule_set": ["turtlewow"],
         "outbound": "eu"
-      },
-      {
-        "rule_set": ["clubsim"],
-        "outbound": "hk"
-      },
-      {
-        "rule_set": ["duolingo"],
-        "outbound": "jp"
       },
       {
         "rule_set": ["ai", "google", "roku", "youtubemusic"],
@@ -221,16 +209,6 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs"
       },
       {
-        "tag": "api",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/api.json"
-      },
-      {
-        "tag": "clubsim",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/clubsim.json"
-      },
-      {
         "tag": "cn",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs"
@@ -241,9 +219,9 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
       },
       {
-        "tag": "duolingo",
+        "tag": "direct",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-duolingo.srs"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/direct.json"
       },
       {
         "tag": "emby",
@@ -261,19 +239,9 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
       },
       {
-        "tag": "google-ads",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-ads.srs"
-      },
-      {
         "tag": "netflix",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
-      },
-      {
-        "tag": "politics",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/politics.json"
       },
       {
         "tag": "roku",
@@ -286,14 +254,14 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
       },
       {
-        "tag": "tmobile",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/tmobile.json"
-      },
-      {
         "tag": "turtlewow",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.json"
+      },
+      {
+        "tag": "white",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/white.json"
       },
       {
         "tag": "youtube",
