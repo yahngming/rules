@@ -3,8 +3,11 @@
   "rules": [
     {
       "domain_suffix": [
+        "api.xmancdn.net",
         "ip-api.com",
         "ipapi.co",
+        "sub.godya.cc",
+        "url.409648.xyz",
         "wttr.in"
       ]
     }
