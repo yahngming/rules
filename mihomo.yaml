@@ -40,13 +40,6 @@ dns:
     - "rule-set:cn"
 
 proxy-groups:
-  - name: Blocked
-    type: select
-    include-all: true
-    filter: 自建|实验|直连|TEST
-    proxies:
-      - DEFAULT
-      - DIRECT
   - name: Emby
     type: select
     include-all: true
@@ -62,6 +55,13 @@ proxy-groups:
       - DEFAULT
       - DIRECT
   - name: Netflix
+    type: select
+    include-all: true
+    filter: 自建|实验|直连|TEST
+    proxies:
+      - DEFAULT
+      - DIRECT
+  - name: Politics
     type: select
     include-all: true
     filter: 自建|实验|直连|TEST
@@ -244,10 +244,10 @@ rules:
   - RULE-SET,cn,DIRECT
   - RULE-SET,cnip,DIRECT
   - RULE-SET,private,DIRECT
-  - RULE-SET,politics,Blocked
   - RULE-SET,emby,Emby
   - RULE-SET,github,GitHub
   - RULE-SET,netflix,Netflix
+  - RULE-SET,politics,Politics
   - RULE-SET,steam,Steam
   - RULE-SET,youtube,YouTube
   - RULE-SET,turtlewow,EU
