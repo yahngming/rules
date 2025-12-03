@@ -3,12 +3,11 @@
   "rules": [
     {
       "domain_suffix": [
-        "minghui.org",
-        "ntdtv.com",
-        "pincong.rocks",
-        "rfa.org",
-        "voachinese.com",
-        "wujieliulan.com"
+        "csl.prod.ondemandconnectivity.com",
+        "epdg.epc.mnc000.mcc454.pub.3gppnetwork.org",
+        "hhk.prod.ondemandconnectivity.com",
+        "ss.epdg.epc.geo.mnc000.mcc454.pub.3gppnetwork.org",
+        "ss.epdg.epc.mnc000.mcc454.pub.3gppnetwork.org"
       ]
     }
   ]
