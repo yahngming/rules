@@ -157,7 +157,7 @@
         "outbound": "default"
       },
       {
-        "rule_set": ["tv"],
+        "rule_set": ["google-ads"],
         "action": "default"
       },
       {
@@ -261,6 +261,11 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
       },
       {
+        "tag": "google-ads",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-ads.srs"
+      },
+      {
         "tag": "netflix",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
@@ -281,14 +286,14 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
       },
       {
+        "tag": "tmobile",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/tmobile.json"
+      },
+      {
         "tag": "turtlewow",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.json"
-      },
-      {
-        "tag": "tv",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/tv.json"
       },
       {
         "tag": "youtube",
