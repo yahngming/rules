@@ -131,6 +131,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
     path: ./ruleset/cnip.mrs
     interval: 86400
+  direct:
+    type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/direct.list
+    path: ./ruleset/direct.list
+    interval: 86400
   duolingo:
     type: http
     format: mrs
@@ -207,6 +214,7 @@ rules:
   - RULE-SET,private,DIRECT
   - RULE-SET,cn,DIRECT
   - RULE-SET,cnip,DIRECT
+  - RULE-SET,direct,DIRECT
   - RULE-SET,emby,Emby
   - RULE-SET,github,GitHub
   - RULE-SET,white,GitHub
