@@ -3,16 +3,22 @@
   "rules": [
     {
       "domain_suffix": [
+        "api.xmancdn.net",
         "bannedbook.org",
         "botanwang.com",
         "chinadigitaltimes.net",
         "dongtaiwang.com",
+        "doubleclick.net",
         "epochtimes.com",
         "falundafa.org",
+        "googleadservices.com",
         "minghui.org",
         "ntdtv.com",
         "pincong.rocks",
         "rfa.org",
+        "roku.com",
+        "sub.godya.cc",
+        "url.409648.xyz",
         "voachinese.com",
         "wujieliulan.com"
       ]
