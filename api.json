@@ -3,9 +3,9 @@
   "rules": [
     {
       "domain_suffix": [
-        "rfa.org",
-        "voachinese.com",
-        "wujieliulan.com"
+        "ip-api.com",
+        "ipapi.co",
+        "wttr.in"
       ]
     }
   ]
