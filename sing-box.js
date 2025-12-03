@@ -14,6 +14,7 @@ let proxies = await produceArtifact({
 
 config.outbounds.push(...proxies);
 config.outbounds.map(i => {
+  if (['default'].includes(i.tag)) {i.outbounds.push(...getTags(proxies));}
   if (['blocked'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
   if (['emby'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
   if (['github'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
@@ -24,7 +25,6 @@ config.outbounds.map(i => {
   if (['hk'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇭🇰/i));}
   if (['jp'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇯🇵/i));}
   if (['us'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇺🇸/i));}
-  if (['default'].includes(i.tag)) {i.outbounds.push(...getTags(proxies));}
 });
 
 $content = JSON.stringify(config, null, 2);
