@@ -96,6 +96,11 @@
       "outbounds": ["direct", "default"]
     },
     {
+      "tag": "politics",
+      "type": "selector",
+      "outbounds": ["direct", "default"]
+    },
+    {
       "tag": "steam",
       "type": "selector",
       "outbounds": ["direct", "default"]
@@ -152,11 +157,15 @@
         "outbound": "default"
       },
       {
+        "rule_set": ["tv"],
+        "action": "default"
+      },
+      {
         "rule_set": ["ads"],
         "action": "reject"
       },
       {
-        "rule_set": ["cn", "cnip"],
+        "rule_set": ["api", "cn", "cnip"],
         "outbound": "direct"
       },
       {
@@ -164,12 +173,16 @@
         "outbound": "emby"
       },
       {
-        "rule_set": ["github", "politics"],
+        "rule_set": ["github"],
         "outbound": "github"
       },
       {
         "rule_set": ["netflix"],
         "outbound": "netflix"
+      },
+      {
+        "rule_set": ["politics"],
+        "outbound": "politics"
       },
       {
         "rule_set": ["steam"],
@@ -182,6 +195,10 @@
       {
         "rule_set": ["turtlewow"],
         "outbound": "eu"
+      },
+      {
+        "rule_set": ["clubsim"],
+        "outbound": "hk"
       },
       {
         "rule_set": ["duolingo"],
@@ -202,6 +219,16 @@
         "tag": "ai",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs"
+      },
+      {
+        "tag": "api",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/api.json"
+      },
+      {
+        "tag": "clubsim",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/clubsim.json"
       },
       {
         "tag": "cn",
@@ -257,6 +284,11 @@
         "tag": "turtlewow",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.json"
+      },
+      {
+        "tag": "tv",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/tv.json"
       },
       {
         "tag": "youtube",
