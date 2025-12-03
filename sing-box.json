@@ -158,7 +158,7 @@
       },
       {
         "rule_set": ["white"],
-        "action": "white"
+        "outbound": "white"
       },
       {
         "rule_set": ["ads"],
