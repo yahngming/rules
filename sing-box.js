@@ -15,10 +15,10 @@ let proxies = await produceArtifact({
 config.outbounds.push(...proxies);
 config.outbounds.map(i => {
   if (['default'].includes(i.tag)) {i.outbounds.push(...getTags(proxies));}
+  if (['white'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
   if (['emby'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
   if (['github'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
   if (['netflix'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
-  if (['politics'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
   if (['steam'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
   if (['youtube'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|直连|TEST/i));}
   if (['eu'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇫🇷|🇩🇪|🇮🇹|🇳🇱|🇪🇸|🇬🇧/i));}
