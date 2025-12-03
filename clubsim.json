@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "minghui.org",
+        "ntdtv.com",
+        "pincong.rocks",
+        "rfa.org",
+        "voachinese.com",
+        "wujieliulan.com"
+      ]
+    }
+  ]
+}
