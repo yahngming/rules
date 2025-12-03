@@ -3,11 +3,11 @@
   "rules": [
     {
       "domain_suffix": [
-        "csl.prod.ondemandconnectivity.com",
-        "epdg.epc.mnc000.mcc454.pub.3gppnetwork.org",
-        "hhk.prod.ondemandconnectivity.com",
-        "ss.epdg.epc.geo.mnc000.mcc454.pub.3gppnetwork.org",
-        "ss.epdg.epc.mnc000.mcc454.pub.3gppnetwork.org"
+        "epdg.epc.mnc240.mcc310.pub.3gppnetwork.org",
+        "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org",
+        "ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org",
+        "ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org",
+        "t-mobile.com"
       ]
     }
   ]
