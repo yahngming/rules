@@ -3,8 +3,6 @@
   "rules": [
     {
       "domain_suffix": [
-        "battle.net",
-        "blizzard.com",
         "duolingo.cn",
         "duolingo.com"
       ],
