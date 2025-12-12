@@ -3,12 +3,15 @@
   "rules": [
     {
       "domain-suffix": [
-        "epdg.epc.mnc240.mcc310.pub.3gppnetwork.org"
-        "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org"
-        "ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org"
-        "ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org"
+        "epdg.epc.mnc240.mcc310.pub.3gppnetwork.org",
+        "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org",
+        "music.youtube.com",
+        "ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org",
+        "ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org",
         "t-mobile.com"
-        "music.youtube.com"
+      ],
+      "ip_cidr": [
+        "169.150.222.0/24"
       ]
     }
   ]
