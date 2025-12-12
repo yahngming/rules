@@ -2,7 +2,7 @@
   "version": 4,
   "rules": [
     {
-      "domain": [
+      "domain_suffix": [
         "logon.turtle-server-eu.kz"
       ],
       "ip_cidr": [
