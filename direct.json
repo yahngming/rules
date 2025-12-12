@@ -2,6 +2,9 @@
   "version": 2,
   "rules": [
     {
+      "domain_prefix": [
+        "cnlogon"
+      ],
       "domain_suffix": [
         "ip-api.com",
         "ipapi.co",
