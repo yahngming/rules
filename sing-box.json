@@ -189,11 +189,19 @@
         "outbound": "youtube"
       },
       {
-        "rule_set": ["turtlewow"],
+        "rule_set": ["eu"],
         "outbound": "eu"
       },
       {
-        "rule_set": ["ai", "google", "roku", "youtubemusic"],
+        "rule_set": ["hk"],
+        "outbound": "hk"
+      },
+      {
+        "rule_set": ["jp"],
+        "outbound": "jp"
+      },
+      {
+        "rule_set": ["ai", "google", "roku", "us"],
         "outbound": "us"
       }
     ],
@@ -229,6 +237,11 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-emby.srs"
       },
       {
+        "tag": "eu",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/eu.json"
+      },
+      {
         "tag": "github",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs"
@@ -237,6 +250,16 @@
         "tag": "google",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
+      },
+      {
+        "tag": "hk",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/hk.json"
+      },
+      {
+        "tag": "jp",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/jp.json"
       },
       {
         "tag": "netflix",
@@ -254,9 +277,9 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
       },
       {
-        "tag": "turtlewow",
+        "tag": "us",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/us.json"
       },
       {
         "tag": "white",
@@ -267,11 +290,6 @@
         "tag": "youtube",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
-      },
-      {
-        "tag": "youtubemusic",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/youtubemusic.json"
       }
     ],
     "auto_detect_interface": true,
