@@ -3,9 +3,7 @@
   "rules": [
     {
       "domain": [
-        "ip-api.com",
-        "ipapi.co",
-        "wttr.in"
+        "logon.turtle-wow.org"
       ]
     },
     {
