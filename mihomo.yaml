@@ -37,7 +37,10 @@ dns:
     - "ntp.*.com"
     - "time.*.com"
     - "time.*.gov"
+    - "rule-set:direct"
     - "rule-set:cn"
+    - "rule-set:cnip"
+    - "rule-set:private"
 
 proxy-groups:
   - name: Emby
