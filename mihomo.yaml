@@ -127,20 +127,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
     path: ./ruleset/category-ads-all.mrs
     interval: 86400
-  battlenet:
-    type: http
-    format: text
-    behavior: classical
-    url: https://raw.githubusercontent.com/yahngming/rules/master/battlenet.list
-    path: ./ruleset/battlenet.list
-    interval: 86400
-  clubsim:
-    type: http
-    format: text
-    behavior: classical
-    url: https://raw.githubusercontent.com/yahngming/rules/master/clubsim.list
-    path: ./ruleset/clubsim.list
-    interval: 86400
   cn:
     type: http
     format: mrs
@@ -162,13 +148,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/yahngming/rules/master/direct.list
     path: ./ruleset/direct.list
     interval: 86400
-  duolingo:
-    type: http
-    format: mrs
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/duolingo.mrs
-    path: ./ruleset/duolingo.mrs
-    interval: 86400
   emby:
     type: http
     format: text
@@ -176,12 +155,33 @@ rule-providers:
     url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
     path: ./ruleset/emby.list
     interval: 86400
+  eu:
+    type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/eu.list
+    path: ./ruleset/eu.list
+    interval: 86400
   github:
     type: http
     format: mrs
     behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
     path: ./ruleset/github.mrs
+    interval: 86400
+  hk:
+    type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/hk.list
+    path: ./ruleset/hk.list
+    interval: 86400
+  jp:
+    type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/jp.list
+    path: ./ruleset/jp.list
     interval: 86400
   netflix:
     type: http
@@ -204,19 +204,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs
     path: ./ruleset/steam.mrs
     interval: 86400
-  tmobile:
+  us:
     type: http
     format: text
     behavior: classical
-    url: https://raw.githubusercontent.com/yahngming/rules/master/tmobile.list
-    path: ./ruleset/tmobile.list
-    interval: 86400
-  turtlewow:
-    type: http
-    format: text
-    behavior: classical
-    url: https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.list
-    path: ./ruleset/turtlewow.list
+    url: https://raw.githubusercontent.com/yahngming/rules/master/us.list
+    path: ./ruleset/us.list
     interval: 86400
   white:
     type: http
@@ -232,13 +225,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
     path: ./ruleset/youtube.mrs
     interval: 86400
-  youtubemusic:
-    type: http
-    format: text
-    behavior: classical
-    url: https://raw.githubusercontent.com/yahngming/rules/master/youtubemusic.list
-    path: ./ruleset/youtubemusic.list
-    interval: 86400
 
 rules:
   - RULE-SET,white,WHITE
@@ -252,9 +238,8 @@ rules:
   - RULE-SET,netflix,Netflix
   - RULE-SET,steam,Steam
   - RULE-SET,youtube,YouTube
-  - RULE-SET,turtlewow,EU
-  - RULE-SET,clubsim,HK
-  - RULE-SET,duolingo,JP
-  - RULE-SET,tmobile,US
-  - RULE-SET,youtubemusic,US
+  - RULE-SET,eu,EU
+  - RULE-SET,hk,HK
+  - RULE-SET,jp,JP
+  - RULE-SET,us,US
   - MATCH,DEFAULT
