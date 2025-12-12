@@ -1,5 +1,4 @@
 DOMAIN,logon.turtle-server-eu.kz
-DOMAIN,logon.turtle-wow.org
 IP-CIDR,51.38.0.0/16,no-resolve
 IP-CIDR,51.58.0.0/16,no-resolve
 IP-CIDR,51.77.0.0/16,no-resolve
