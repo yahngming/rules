@@ -3,8 +3,7 @@
   "rules": [
     {
       "domain": [
-        "logon.turtle-server-eu.kz",
-        "logon.turtle-wow.org"
+        "logon.turtle-server-eu.kz"
       ],
       "ip_cidr": [
         "51.38.0.0/16",
