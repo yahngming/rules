@@ -1,6 +1,7 @@
 {
   "version": 2,
   "rules": [
+    {
       "domain_suffix": [
         "cnlogon.turtle-wow.org",
         "ip-api.com",
