@@ -1,11 +1,8 @@
 {
   "version": 2,
   "rules": [
-    {
-      "domain_prefix": [
-        "cnlogon"
-      ],
       "domain_suffix": [
+        "cnlogon.turtle-wow.org",
         "ip-api.com",
         "ipapi.co",
         "wttr.in"
