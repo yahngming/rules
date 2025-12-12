@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain": [
+        "cnlogon.turtle-wow.org"
+      ]
+    },
+    {
+      "ip_cidr": [
+        "51.89.0.0/16"
+      ]
+    }
+  ]
+}
