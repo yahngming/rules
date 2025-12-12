@@ -2,6 +2,13 @@
   "version": 2,
   "rules": [
     {
+      "domain": [
+        "ip-api.com",
+        "ipapi.co",
+        "wttr.in"
+      ]
+    },
+    {
       "ip_cidr": [
         "51.38.0.0/16",
         "51.77.0.0/16",
