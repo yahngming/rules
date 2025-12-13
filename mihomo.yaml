@@ -37,9 +37,9 @@ dns:
     - "ntp.*.com"
     - "time.*.com"
     - "time.*.gov"
-    - "rule-set:direct"
     - "rule-set:cn"
     - "rule-set:cnip"
+    - "rule-set:direct"
     - "rule-set:private"
 
 proxy-groups:
@@ -120,12 +120,26 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
+  blizzard:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/blizzard.mrs
+    path: ./ruleset/blizzard.mrs
+    interval: 86400
   category-ads-all:
     type: http
     format: mrs
     behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
     path: ./ruleset/category-ads-all.mrs
+    interval: 86400
+  category-ai-!cn:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
+    path: ./ruleset/category-ai-!cn.mrs
     interval: 86400
   cn:
     type: http
@@ -168,6 +182,13 @@ rule-providers:
     behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
     path: ./ruleset/github.mrs
+    interval: 86400
+  google:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
+    path: ./ruleset/google.mrs
     interval: 86400
   hk:
     type: http
@@ -241,5 +262,8 @@ rules:
   - RULE-SET,eu,EU
   - RULE-SET,hk,HK
   - RULE-SET,jp,JP
+  - RULE-SET,blizzard,US
+  - RULE-SET,category-ai-!cn,US
+  - RULE-SET,google,US
   - RULE-SET,us,US
   - MATCH,DEFAULT
