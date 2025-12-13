@@ -1,3 +1,5 @@
+#https://github.com/stowmyy/dropship/blob/main/dropship/dropship/src/core/Settings.h
+
 #australia
 IP-CIDR,158.115.196.0/23,no-resolve
 
