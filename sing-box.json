@@ -136,7 +136,7 @@
         "outbound": "white"
       },
       {
-        "rule_set": ["ads"],
+        "rule_set": ["ads", "reject"],
         "action": "reject"
       },
       {
@@ -152,7 +152,7 @@
         "outbound": "netflix"
       },
       {
-        "rule_set": ["blizzard", "steam"],
+        "rule_set": ["game", "steam"],
         "outbound": "steam"
       },
       {
@@ -170,11 +170,6 @@
         "tag": "ai",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs"
-      },
-      {
-        "tag": "blizzard",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/blizzard.json"
       },
       {
         "tag": "cn",
@@ -197,6 +192,11 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-emby.srs"
       },
       {
+        "tag": "game",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/game.json"
+      },
+      {
         "tag": "github",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs"
@@ -210,6 +210,11 @@
         "tag": "netflix",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
+      },
+      {
+        "tag": "reject",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/reject.json"
       },
       {
         "tag": "roku",
