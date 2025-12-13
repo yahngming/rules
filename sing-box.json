@@ -201,7 +201,7 @@
         "outbound": "jp"
       },
       {
-        "rule_set": ["ai", "google", "roku", "us"],
+        "rule_set": ["ai", "blizzard", "google", "roku", "us"],
         "outbound": "us"
       }
     ],
@@ -215,6 +215,11 @@
         "tag": "ai",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs"
+      },
+      {
+        "tag": "blizzard",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/blizzard.srs"
       },
       {
         "tag": "cn",
