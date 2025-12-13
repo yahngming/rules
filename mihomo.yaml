@@ -43,52 +43,38 @@ dns:
     - "rule-set:private"
 
 proxy-groups:
-  - name: Blizzard
-    type: select
-    include-all: true
-    filter: 🇭🇰|🇯🇵|🇸🇬|🇹🇼
-    proxies:
-      - DEFAULT
-      - DIRECT
   - name: Emby
     type: select
     include-all: true
-    filter: 自建|实验|直连|TEST
-    proxies:
-      - DEFAULT
-      - DIRECT
-  - name: GitHub
-    type: select
-    include-all: true
-    filter: 🇺🇸
+    filter: Emby|自建|实验|直连|TEST
     proxies:
       - DEFAULT
       - DIRECT
   - name: Netflix
     type: select
     include-all: true
-    filter: 自建|实验|直连|TEST
+    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|直连|TEST
     proxies:
       - DEFAULT
       - DIRECT
   - name: Steam
     type: select
     include-all: true
-    filter: 自建|实验|直连|TEST
+    filter: 🇦🇷|🇭🇰|🇯🇵|🇵🇰|🇸🇬|🇹🇼|🇹🇷
     proxies:
       - DEFAULT
       - DIRECT
   - name: YouTube
     type: select
     include-all: true
-    filter: 自建|实验|直连|TEST
+    filter: 🇺🇸
     proxies:
       - DEFAULT
       - DIRECT
   - name: WHITE
     type: select
     include-all: true
-    filter: 自建|实验|直连|TEST
+    filter: 自建
     proxies:
       - DEFAULT
       - DIRECT
@@ -212,13 +198,13 @@ rules:
   - RULE-SET,cnip,DIRECT
   - RULE-SET,direct,DIRECT
   - RULE-SET,private,DIRECT
-  - RULE-SET,blizzard,Blizzard
   - RULE-SET,emby,Emby
-  - RULE-SET,ai,GitHub
-  - RULE-SET,github,GitHub
-  - RULE-SET,google,GitHub
-  - RULE-SET,roku,GitHub
   - RULE-SET,netflix,Netflix
+  - RULE-SET,blizzard,Steam
   - RULE-SET,steam,Steam
+  - RULE-SET,ai,YouTube
+  - RULE-SET,github,YouTube
+  - RULE-SET,google,YouTube
+  - RULE-SET,roku,YouTube
   - RULE-SET,youtube,YouTube
   - MATCH,DEFAULT
