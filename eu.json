@@ -2,9 +2,6 @@
   "version": 4,
   "rules": [
     {
-      "domain_suffix": [
-        "logon.turtle-server-eu.kz"
-      ],
       "ip_cidr": [
         "51.38.0.0/16",
         "51.68.0.0/16",
