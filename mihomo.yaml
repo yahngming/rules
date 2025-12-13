@@ -120,26 +120,26 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
+  ads:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
+    path: ./ruleset/ads.mrs
+    interval: 86400
+  ai:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
+    path: ./ruleset/ai.mrs
+    interval: 86400
   blizzard:
     type: http
     format: mrs
     behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/blizzard.mrs
     path: ./ruleset/blizzard.mrs
-    interval: 86400
-  category-ads-all:
-    type: http
-    format: mrs
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
-    path: ./ruleset/category-ads-all.mrs
-    interval: 86400
-  category-ai-!cn:
-    type: http
-    format: mrs
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
-    path: ./ruleset/category-ai-!cn.mrs
     interval: 86400
   cn:
     type: http
@@ -218,6 +218,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
     path: ./ruleset/private.mrs
     interval: 86400
+  roku:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/roku.mrs
+    path: ./ruleset/roku.mrs
+    interval: 86400
   steam:
     type: http
     format: mrs
@@ -249,7 +256,7 @@ rule-providers:
 
 rules:
   - RULE-SET,white,WHITE
-  - RULE-SET,category-ads-all,REJECT
+  - RULE-SET,ads,REJECT
   - RULE-SET,cn,DIRECT
   - RULE-SET,cnip,DIRECT
   - RULE-SET,direct,DIRECT
@@ -262,8 +269,9 @@ rules:
   - RULE-SET,eu,EU
   - RULE-SET,hk,HK
   - RULE-SET,jp,JP
+  - RULE-SET,ai,US
   - RULE-SET,blizzard,US
-  - RULE-SET,category-ai-!cn,US
   - RULE-SET,google,US
+  - RULE-SET,roku,US
   - RULE-SET,us,US
   - MATCH,DEFAULT
