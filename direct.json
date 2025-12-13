@@ -2,6 +2,9 @@
   "version": 4,
   "rules": [
     {
+      "domain_keyword": [
+        "turtle-server"
+      ]
       "domain_suffix": [
         "ip-api.com",
         "ipapi.co",
