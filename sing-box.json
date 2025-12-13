@@ -91,11 +91,6 @@
       "outbounds": ["direct", "default"]
     },
     {
-      "tag": "github",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
       "tag": "netflix",
       "type": "selector",
       "outbounds": ["direct", "default"]
@@ -107,26 +102,6 @@
     },
     {
       "tag": "youtube",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
-      "tag": "eu",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
-      "tag": "hk",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
-      "tag": "jp",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
-      "tag": "us",
       "type": "selector",
       "outbounds": ["direct", "default"]
     },
@@ -173,36 +148,16 @@
         "outbound": "emby"
       },
       {
-        "rule_set": ["github"],
-        "outbound": "github"
-      },
-      {
         "rule_set": ["netflix"],
         "outbound": "netflix"
       },
       {
-        "rule_set": ["steam"],
+        "rule_set": ["blizzard", "steam"],
         "outbound": "steam"
       },
       {
-        "rule_set": ["youtube"],
+        "rule_set": ["ai", "github", "google", "roku", "youtube"],
         "outbound": "youtube"
-      },
-      {
-        "rule_set": ["eu"],
-        "outbound": "eu"
-      },
-      {
-        "rule_set": ["hk"],
-        "outbound": "hk"
-      },
-      {
-        "rule_set": ["jp"],
-        "outbound": "jp"
-      },
-      {
-        "rule_set": ["ai", "blizzard", "google", "roku", "us"],
-        "outbound": "us"
       }
     ],
     "rule_set": [
@@ -219,7 +174,7 @@
       {
         "tag": "blizzard",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/blizzard.srs"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/blizzard.json"
       },
       {
         "tag": "cn",
@@ -242,11 +197,6 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-emby.srs"
       },
       {
-        "tag": "eu",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/eu.json"
-      },
-      {
         "tag": "github",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs"
@@ -255,16 +205,6 @@
         "tag": "google",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
-      },
-      {
-        "tag": "hk",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/hk.json"
-      },
-      {
-        "tag": "jp",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/jp.json"
       },
       {
         "tag": "netflix",
@@ -280,11 +220,6 @@
         "tag": "steam",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
-      },
-      {
-        "tag": "us",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/us.json"
       },
       {
         "tag": "white",
