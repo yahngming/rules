@@ -173,13 +173,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/yahngming/rules/master/reject.list
     path: ./ruleset/reject.list
     interval: 86400
-  roku:
-    type: http
-    format: mrs
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/roku.mrs
-    path: ./ruleset/roku.mrs
-    interval: 86400
   steam:
     type: http
     format: mrs
@@ -217,6 +210,5 @@ rules:
   - RULE-SET,ai,YouTube
   - RULE-SET,github,YouTube
   - RULE-SET,google,YouTube
-  - RULE-SET,roku,YouTube
   - RULE-SET,youtube,YouTube
   - MATCH,DEFAULT
