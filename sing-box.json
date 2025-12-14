@@ -160,7 +160,7 @@
         "outbound": "steam"
       },
       {
-        "rule_set": ["ai", "github", "google", "roku", "youtube"],
+        "rule_set": ["ai", "github", "google", "youtube"],
         "outbound": "youtube"
       }
     ],
@@ -219,11 +219,6 @@
         "tag": "reject",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/reject.json"
-      },
-      {
-        "tag": "roku",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-roku.srs"
       },
       {
         "tag": "steam",
