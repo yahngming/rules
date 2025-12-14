@@ -37,7 +37,10 @@
         "server": "direct"
       },
       {
-        "query_type": ["A", "AAAA"],
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
         "server": "fakeip",
         "rewrite_ttl": 1
       }
