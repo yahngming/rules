@@ -24,21 +24,19 @@ dns:
     - 119.29.29.29
     - 114.114.114.114
   fake-ip-filter:
-    - "*.direct"
-    - "*.example"
     - "*.home.arpa"
     - "*.invalid"
     - "*.lan"
     - "*.local"
     - "*.localdomain"
     - "*.localhost"
-    - "*.test"
     - "+.battle.net"
     - "+.battlenet.com.cn"
     - "+.pool.ntp.org"
     - "+.pub.3gppnetwork.org"
     - "+.stun"
     - "+.stun.*"
+    - "lens.l.google.com"
     - "ntp.*.com"
     - "proxy.golang.org"
     - "time.*.com"
