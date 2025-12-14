@@ -2,6 +2,25 @@ DOMAIN-KEYWORD,turtle-server
 DOMAIN-SUFFIX,ipapi.co
 DOMAIN-SUFFIX,wttr.in
 
+#regioncheck
+DOMAIN,ext1-hkg1.steamserver.net
+DOMAIN,ext2-hkg1.steamserver.net
+DOMAIN,ext3-hkg1.steamserver.net
+DOMAIN,ext4-hkg1.steamserver.net
+DOMAIN,ext5-hkg1.steamserver.net
+DOMAIN,ext6-hkg1.steamserver.net
+DOMAIN,ext7-hkg1.steamserver.net
+DOMAIN,ext1-lax1.steamserver.net
+DOMAIN,ext2-lax1.steamserver.net
+DOMAIN,ext1-sgp1.steamserver.net
+DOMAIN,ext2-sgp1.steamserver.net
+DOMAIN,ext3-sgp1.steamserver.net
+DOMAIN,ext4-sgp1.steamserver.net
+DOMAIN,ext1-tyo3.steamserver.net
+DOMAIN,ext2-tyo3.steamserver.net
+DOMAIN,ext3-tyo3.steamserver.net
+DOMAIN,ext4-tyo3.steamserver.net
+
 #japan
 IP-CIDR,34.84.0.0/16,no-resolve
 IP-CIDR,34.85.0.0/17,no-resolve
