@@ -64,7 +64,7 @@ proxy-groups:
   - name: Steam
     type: select
     include-all: true
-    filter: 🇦🇷|🇭🇰|🇯🇵|🇵🇰|🇸🇬|🇹🇼|🇹🇷
+    filter: 🇦🇷|🇭🇰|🇯🇵|🇵🇰|🇸🇬|🇹🇷|🇹🇼
     proxies:
       - DEFAULT
       - DIRECT
