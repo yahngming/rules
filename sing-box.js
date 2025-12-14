@@ -18,7 +18,7 @@ config.outbounds.map(i => {
   if (['white'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建/i));}
   if (['emby'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /Emby|自建|实验|直连|TEST/i));}
   if (['netflix'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇦🇷|🇵🇰|🇹🇷|实验|直连|TEST/i));}
-  if (['steam'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇦🇷|🇭🇰|🇯🇵|🇵🇰|🇸🇬|🇹🇼|🇹🇷/i));}
+  if (['steam'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇦🇷|🇭🇰|🇯🇵|🇵🇰|🇸🇬|🇹🇷|🇹🇼/i));}
   if (['youtube'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇺🇸/i));}
 });
 
