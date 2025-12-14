@@ -53,7 +53,7 @@ proxy-groups:
   - name: Netflix
     type: select
     include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|自建|实验|直连|TEST
+    filter: 🇦🇷|🇵🇰|🇹🇷|实验|直连|TEST
     proxies:
       - DEFAULT
       - DIRECT
