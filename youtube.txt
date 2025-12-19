@@ -1,1 +1,3 @@
+ytd-ad-slot-renderer
+ytd-rich-section-renderer
 ytd-rich-section-renderer
