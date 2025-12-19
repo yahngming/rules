@@ -1,3 +1,2 @@
-###ytd-ad-slot-renderer
-###ytd-rich-section-renderer
-###ytd-rich-section-renderer
+www.youtube.com###secondary
+www.youtube.com##ytd-rich-section-renderer
