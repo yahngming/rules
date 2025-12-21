@@ -95,6 +95,11 @@
       "outbounds": ["direct", "default"]
     },
     {
+      "tag": "github",
+      "type": "selector",
+      "outbounds": ["direct", "default"]
+    },
+    {
       "tag": "netflix",
       "type": "selector",
       "outbounds": ["direct", "default"]
@@ -152,6 +157,10 @@
         "outbound": "emby"
       },
       {
+        "rule_set": ["github"],
+        "outbound": "github"
+      },
+      {
         "rule_set": ["netflix"],
         "outbound": "netflix"
       },
@@ -160,7 +169,7 @@
         "outbound": "steam"
       },
       {
-        "rule_set": ["ai", "github", "google", "youtube"],
+        "rule_set": ["ai", "google", "youtube"],
         "outbound": "youtube"
       }
     ],
