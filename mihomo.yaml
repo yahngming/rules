@@ -54,6 +54,13 @@ proxy-groups:
     proxies:
       - DEFAULT
       - DIRECT
+  - name: GitHub
+    type: select
+    include-all: true
+    filter: 自建|实验|直连|TEST
+    proxies:
+      - DEFAULT
+      - DIRECT
   - name: Netflix
     type: select
     include-all: true
@@ -204,11 +211,11 @@ rules:
   - RULE-SET,direct,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,emby,Emby
+  - RULE-SET,github,GitHub
   - RULE-SET,netflix,Netflix
   - RULE-SET,game,Steam
   - RULE-SET,steam,Steam
   - RULE-SET,ai,YouTube
-  - RULE-SET,github,YouTube
   - RULE-SET,google,YouTube
   - RULE-SET,youtube,YouTube
   - MATCH,DEFAULT
