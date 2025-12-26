@@ -2,25 +2,6 @@
   "version": 4,
   "rules": [
     {
-      "domain": [
-        "ext1-hkg1.steamserver",
-        "ext2-hkg1.steamserver",
-        "ext3-hkg1.steamserver",
-        "ext4-hkg1.steamserver",
-        "ext5-hkg1.steamserver",
-        "ext6-hkg1.steamserver",
-        "ext7-hkg1.steamserver",
-        "ext1-lax1.steamserver",
-        "ext2-lax1.steamserver",
-        "ext1-sgp1.steamserver",
-        "ext2-sgp1.steamserver",
-        "ext3-sgp1.steamserver",
-        "ext4-sgp1.steamserver",
-        "ext1-tyo3.steamserver",
-        "ext2-tyo3.steamserver",
-        "ext3-tyo3.steamserver",
-        "ext4-tyo3.steamserver"
-      ],
       "domain_keyword": [
         "turtle-server"
       ],
