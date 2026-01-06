@@ -206,10 +206,6 @@ rules:
   - RULE-SET,white,WHITE
   - RULE-SET,ads,REJECT
   - RULE-SET,reject,REJECT
-  - RULE-SET,cn,DIRECT
-  - RULE-SET,cnip,DIRECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,private,DIRECT
   - RULE-SET,emby,Emby
   - RULE-SET,github,GitHub
   - RULE-SET,netflix,Netflix
@@ -218,4 +214,8 @@ rules:
   - RULE-SET,ai,YouTube
   - RULE-SET,google,YouTube
   - RULE-SET,youtube,YouTube
+  - RULE-SET,cn,DIRECT
+  - RULE-SET,cnip,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,private,DIRECT
   - MATCH,DEFAULT
