@@ -149,10 +149,6 @@
         "action": "reject"
       },
       {
-        "rule_set": ["cn", "cnip", "direct"],
-        "outbound": "direct"
-      },
-      {
         "rule_set": ["emby"],
         "outbound": "emby"
       },
@@ -171,6 +167,10 @@
       {
         "rule_set": ["ai", "google", "youtube"],
         "outbound": "youtube"
+      },
+      {
+        "rule_set": ["cn", "cnip", "direct"],
+        "outbound": "direct"
       }
     ],
     "rule_set": [
