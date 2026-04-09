@@ -1,3 +1,4 @@
 DOMAIN-KEYWORD,turtle-server
 DOMAIN-SUFFIX,ipapi.co
 DOMAIN-SUFFIX,wttr.in
+IP-CIDR,148.135.36.60/32,no-resolve
