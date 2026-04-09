@@ -8,6 +8,9 @@
       "domain_suffix": [
         "ipapi.co",
         "wttr.in"
+      ],
+      "ip_cidr": [
+        "148.135.36.60/32"
       ]
     }
   ]
