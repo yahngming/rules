@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_keyword": [
+        "sharepoint"
+      ],
+      "domain_suffix": [
+        "as174.de",
+        "imetyou.top",
+        "recmata.net"
+      ]
+    }
+  ]
+}
