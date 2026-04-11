@@ -169,7 +169,7 @@
         "outbound": "youtube"
       },
       {
-        "rule_set": ["cn", "cnip", "direct", "private"],
+        "rule_set": ["cn", "cnip", "direct"],
         "outbound": "direct"
       }
     ],
@@ -223,11 +223,6 @@
         "tag": "netflix",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
-      },
-      {
-        "tag": "private",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs"
       },
       {
         "tag": "reject",
