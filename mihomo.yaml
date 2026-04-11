@@ -50,21 +50,21 @@ proxy-groups:
   - name: Emby
     type: select
     include-all: true
-    filter: Emby|自建|实验|直连|TEST|0.
+    filter: 自建|实验|直连|TEST|Emby|0\.
     proxies:
       - DEFAULT
       - DIRECT
   - name: GitHub
     type: select
     include-all: true
-    filter: 自建|实验|直连|TEST|0.
+    filter: 自建|实验|直连|TEST|0\.
     proxies:
       - DEFAULT
       - DIRECT
   - name: Netflix
     type: select
     include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|实验|直连|TEST|0.
+    filter: 🇦🇷|🇵🇰|🇹🇷|实验|直连|TEST|0\.
     proxies:
       - DEFAULT
       - DIRECT
