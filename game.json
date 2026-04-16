@@ -3,23 +3,23 @@
   "rules": [
     {
       "domain": [
-        "ext1-hkg1.steamserver",
-        "ext2-hkg1.steamserver",
-        "ext3-hkg1.steamserver",
-        "ext4-hkg1.steamserver",
-        "ext5-hkg1.steamserver",
-        "ext6-hkg1.steamserver",
-        "ext7-hkg1.steamserver",
-        "ext1-lax1.steamserver",
-        "ext2-lax1.steamserver",
-        "ext1-sgp1.steamserver",
-        "ext2-sgp1.steamserver",
-        "ext3-sgp1.steamserver",
-        "ext4-sgp1.steamserver",
-        "ext1-tyo3.steamserver",
-        "ext2-tyo3.steamserver",
-        "ext3-tyo3.steamserver",
-        "ext4-tyo3.steamserver"
+        "ext1-hkg1.steamserver.net",
+        "ext2-hkg1.steamserver.net",
+        "ext3-hkg1.steamserver.net",
+        "ext4-hkg1.steamserver.net",
+        "ext5-hkg1.steamserver.net",
+        "ext6-hkg1.steamserver.net",
+        "ext7-hkg1.steamserver.net",
+        "ext1-lax1.steamserver.net",
+        "ext2-lax1.steamserver.net",
+        "ext1-sgp1.steamserver.net",
+        "ext2-sgp1.steamserver.net",
+        "ext3-sgp1.steamserver.net",
+        "ext4-sgp1.steamserver.net",
+        "ext1-tyo3.steamserver.net",
+        "ext2-tyo3.steamserver.net",
+        "ext3-tyo3.steamserver.net",
+        "ext4-tyo3.steamserver.net"
       ],
       "domain_suffix": [
         "rmadvanced.com"
