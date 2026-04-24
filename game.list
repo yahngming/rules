@@ -20,6 +20,9 @@ DOMAIN,ext4-tyo3.steamserver.net
 #redmoonadvanced
 DOMAIN-SUFFIX,rmadvanced.com
 
+#overwatch
+IP-CIDR,103.4.0.0/16,no-resolve
+
 #turtlewow
 IP-CIDR,169.150.222.0/24,no-resolve
 IP-CIDR,51.38.0.0/16,no-resolve
