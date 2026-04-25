@@ -90,27 +90,17 @@
       "outbounds": ["direct", "default"]
     },
     {
-      "tag": "emby",
+      "tag": "game",
       "type": "selector",
       "outbounds": ["direct", "default"]
     },
     {
-      "tag": "github",
+      "tag": "stream",
       "type": "selector",
       "outbounds": ["direct", "default"]
     },
     {
-      "tag": "netflix",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
-      "tag": "steam",
-      "type": "selector",
-      "outbounds": ["direct", "default"]
-    },
-    {
-      "tag": "youtube",
+      "tag": "us",
       "type": "selector",
       "outbounds": ["direct", "default"]
     },
@@ -149,28 +139,20 @@
         "action": "reject"
       },
       {
-        "rule_set": ["emby"],
-        "outbound": "emby"
-      },
-      {
-        "rule_set": ["github"],
-        "outbound": "github"
-      },
-      {
-        "rule_set": ["netflix"],
-        "outbound": "netflix"
+        "rule_set": ["cn", "cnip", "direct", "private"],
+        "outbound": "direct"
       },
       {
         "rule_set": ["game", "steam"],
-        "outbound": "steam"
+        "outbound": "game"
       },
       {
-        "rule_set": ["ai", "google", "youtube"],
-        "outbound": "youtube"
+        "rule_set": ["emby", "netflix"],
+        "outbound": "stream"
       },
       {
-        "rule_set": ["cn", "cnip", "direct", "private"],
-        "outbound": "direct"
+        "rule_set": ["ai", "github", "google", "youtube"],
+        "outbound": "us"
       }
     ],
     "rule_set": [
