@@ -47,45 +47,30 @@ dns:
     - "rule-set:private"
 
 proxy-groups:
-  - name: Emby
+  - name: WHITE
+    type: select
+    include-all: true
+    filter: 自建
+    proxies:
+      - DEFAULT
+      - DIRECT
+  - name: GAME
+    type: select
+    include-all: true
+    proxies:
+      - DEFAULT
+      - DIRECT
+  - name: STREAM
     type: select
     include-all: true
     filter: 自建|实验|直连|TEST|Emby|0\.
     proxies:
       - DEFAULT
       - DIRECT
-  - name: GitHub
-    type: select
-    include-all: true
-    filter: 自建|实验|直连|TEST|0\.
-    proxies:
-      - DEFAULT
-      - DIRECT
-  - name: Netflix
-    type: select
-    include-all: true
-    filter: 🇦🇷|🇵🇰|🇹🇷|实验|直连|TEST|0\.
-    proxies:
-      - DEFAULT
-      - DIRECT
-  - name: Steam
-    type: select
-    include-all: true
-    filter: 🇦🇷|🇭🇰|🇯🇵|🇵🇰|🇸🇬|🇹🇷|🇹🇼
-    proxies:
-      - DEFAULT
-      - DIRECT
-  - name: YouTube
+  - name: US
     type: select
     include-all: true
     filter: 🇺🇸
-    proxies:
-      - DEFAULT
-      - DIRECT
-  - name: WHITE
-    type: select
-    include-all: true
-    filter: 自建
     proxies:
       - DEFAULT
       - DIRECT
@@ -206,16 +191,16 @@ rules:
   - RULE-SET,white,WHITE
   - RULE-SET,ads,REJECT
   - RULE-SET,reject,REJECT
-  - RULE-SET,emby,Emby
-  - RULE-SET,github,GitHub
-  - RULE-SET,netflix,Netflix
-  - RULE-SET,game,Steam
-  - RULE-SET,steam,Steam
-  - RULE-SET,ai,YouTube
-  - RULE-SET,google,YouTube
-  - RULE-SET,youtube,YouTube
   - RULE-SET,cn,DIRECT
   - RULE-SET,cnip,DIRECT
   - RULE-SET,direct,DIRECT
   - RULE-SET,private,DIRECT
+  - RULE-SET,game,GAME
+  - RULE-SET,steam,GAME
+  - RULE-SET,emby,STREAM
+  - RULE-SET,netflix,STREAM
+  - RULE-SET,ai,US
+  - RULE-SET,github,US
+  - RULE-SET,google,US
+  - RULE-SET,youtube,US
   - MATCH,DEFAULT
