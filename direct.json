@@ -2,9 +2,6 @@
   "version": 3,
   "rules": [
     {
-      "domain_keyword": [
-        "turtle-server"
-      ],
       "domain_suffix": [
         "ipapi.co",
         "wttr.in"
