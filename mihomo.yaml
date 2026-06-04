@@ -63,7 +63,7 @@ proxy-groups:
   - name: STREAM
     type: select
     include-all: true
-    filter: 自建|实验|直连|TEST|Emby|0\.
+    filter: 自建|实验|日用|0\.
     proxies:
       - DEFAULT
       - DIRECT
