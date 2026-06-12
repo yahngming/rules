@@ -47,7 +47,7 @@ dns:
     - "rule-set:private"
 
 proxy-groups:
-  - name: WHITE
+  - name: FORCE
     type: select
     include-all: true
     filter: 自建
@@ -123,6 +123,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
     path: ./ruleset/emby.list
     interval: 86400
+  force:
+    type: http
+    format: text
+    behavior: classical
+    url: https://raw.githubusercontent.com/yahngming/rules/master/force.list
+    path: ./ruleset/force.list
+    interval: 86400
   game:
     type: http
     format: text
@@ -172,12 +179,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs
     path: ./ruleset/steam.mrs
     interval: 86400
-  white:
+  x:
     type: http
-    format: text
-    behavior: classical
-    url: https://raw.githubusercontent.com/yahngming/rules/master/white.list
-    path: ./ruleset/white.list
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs
+    path: ./ruleset/x.mrs
     interval: 86400
   youtube:
     type: http
@@ -188,7 +195,7 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,white,WHITE
+  - RULE-SET,force,FORCE
   - RULE-SET,ads,REJECT
   - RULE-SET,reject,REJECT
   - RULE-SET,cn,DIRECT
@@ -196,11 +203,12 @@ rules:
   - RULE-SET,direct,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,game,GAME
-  - RULE-SET,steam,GAME
   - RULE-SET,emby,STREAM
   - RULE-SET,netflix,STREAM
   - RULE-SET,ai,US
   - RULE-SET,github,US
   - RULE-SET,google,US
+  - RULE-SET,steam,US
+  - RULE-SET,x,US
   - RULE-SET,youtube,US
   - MATCH,DEFAULT
