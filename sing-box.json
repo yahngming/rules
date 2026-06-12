@@ -85,7 +85,7 @@
       "outbounds": ["direct"]
     },
     {
-      "tag": "white",
+      "tag": "force",
       "type": "selector",
       "outbounds": ["direct", "default"]
     },
@@ -131,8 +131,8 @@
         "outbound": "default"
       },
       {
-        "rule_set": ["white"],
-        "outbound": "white"
+        "rule_set": ["force"],
+        "outbound": "force"
       },
       {
         "rule_set": ["ads", "reject"],
@@ -143,7 +143,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": ["game", "steam"],
+        "rule_set": ["game"],
         "outbound": "game"
       },
       {
@@ -151,7 +151,7 @@
         "outbound": "stream"
       },
       {
-        "rule_set": ["ai", "github", "google", "youtube"],
+        "rule_set": ["ai", "github", "google", "steam", "x", "youtube"],
         "outbound": "us"
       }
     ],
@@ -185,6 +185,11 @@
         "tag": "emby",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/emby.json"
+      },
+      {
+        "tag": "force",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/force.json"
       },
       {
         "tag": "game",
@@ -222,9 +227,9 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
       },
       {
-        "tag": "white",
+        "tag": "x",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/white.json"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs"
       },
       {
         "tag": "youtube",
