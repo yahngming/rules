@@ -95,6 +95,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
     path: ./ruleset/ai.mrs
     interval: 86400
+  blizzard:
+    type: http
+    format: mrs
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/blizzard.mrs
+    path: ./ruleset/cn.mrs
+    interval: 86400
   cn:
     type: http
     format: mrs
@@ -206,6 +213,7 @@ rules:
   - RULE-SET,emby,STREAM
   - RULE-SET,netflix,STREAM
   - RULE-SET,ai,US
+  - RULE-SET,blizzard,US
   - RULE-SET,github,US
   - RULE-SET,google,US
   - RULE-SET,steam,US
