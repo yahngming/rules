@@ -2,10 +2,6 @@
   "version": 3,
   "rules": [
     {
-      "domain": [
-        "api.xmancdn.net",
-        "url.409648.xyz"
-      ],
       "domain_suffix": [
         "bannedbook.org",
         "botanwang.com",
@@ -21,7 +17,8 @@
         "pincong.rocks",
         "rfa.org",
         "voachinese.com",
-        "wujieliulan.com"
+        "wujieliulan.com",
+        "xmancdn.net"
       ]
     }
   ]
