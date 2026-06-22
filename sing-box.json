@@ -143,7 +143,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": ["game"],
+        "rule_set": ["blizzard", "game", "steam"],
         "outbound": "game"
       },
       {
@@ -151,7 +151,7 @@
         "outbound": "stream"
       },
       {
-        "rule_set": ["ai", "blizzard", "github", "google", "steam", "x", "youtube"],
+        "rule_set": ["ai", "github", "google", "x", "youtube"],
         "outbound": "us"
       }
     ],
