@@ -209,14 +209,14 @@ rules:
   - RULE-SET,cnip,DIRECT
   - RULE-SET,direct,DIRECT
   - RULE-SET,private,DIRECT
+  - RULE-SET,blizzard,GAME
   - RULE-SET,game,GAME
+  - RULE-SET,steam,GAME
   - RULE-SET,emby,STREAM
   - RULE-SET,netflix,STREAM
   - RULE-SET,ai,US
-  - RULE-SET,blizzard,US
   - RULE-SET,github,US
   - RULE-SET,google,US
-  - RULE-SET,steam,US
   - RULE-SET,x,US
   - RULE-SET,youtube,US
   - MATCH,DEFAULT
