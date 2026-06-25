@@ -2,6 +2,9 @@
   "version": 3,
   "rules": [
     {
+      "domain_keyword": [
+        "youno"
+      ],
       "domain_suffix": [
         "imetyou.top",
         "stentvessel.xyz"
