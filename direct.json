@@ -2,9 +2,6 @@
   "version": 3,
   "rules": [
     {
-      "domain": [
-        "apac.capycraft.io"
-      ],
       "domain_suffix": [
         "ipapi.co",
         "wttr.in"
