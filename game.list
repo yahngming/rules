@@ -22,3 +22,6 @@ DOMAIN-SUFFIX,rmadvanced.com
 
 #overwatch
 IP-CIDR,103.4.114.0/24,no-resolve
+
+#turtlewow
+IP-CIDR,178.249.208.0/24,no-resolve
