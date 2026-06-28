@@ -33,7 +33,7 @@
         "server": "fakeip"
       },
       {
-        "rule_set": "cn",
+        "rule_set": ["cn"],
         "server": "direct"
       },
       {
@@ -159,87 +159,104 @@
       {
         "tag": "ads",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "ai",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "blizzard",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-blizzard.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-blizzard.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "cn",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "cnip",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "direct",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/direct.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/direct.json",
+        "download_detour": "direct"
       },
       {
         "tag": "emby",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/emby.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/emby.json",
+        "download_detour": "direct"
       },
       {
         "tag": "force",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/force.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/force.json",
+        "download_detour": "direct"
       },
       {
         "tag": "game",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/game.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/game.json",
+        "download_detour": "direct"
       },
       {
         "tag": "github",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "google",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "netflix",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "private",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "reject",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/reject.json"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/reject.json",
+        "download_detour": "direct"
       },
       {
         "tag": "steam",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "x",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "youtube",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
+        "download_detour": "direct"
       }
     ],
     "auto_detect_interface": true,
