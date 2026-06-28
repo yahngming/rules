@@ -1,31 +1,36 @@
 proxy-groups:
+  - name: DEFAULT
+    include-all: true
+    type: select
+    proxies:
+      - DIRECT
   - name: FORCE
     type: select
     include-all: true
     filter: 自建
     proxies:
+      - DEFAULT
       - DIRECT
-      - GLOBAL
   - name: GAME
     type: select
     include-all: true
     proxies:
+      - DEFAULT
       - DIRECT
-      - GLOBAL
   - name: STREAM
     type: select
     include-all: true
     filter: 自建|实验|日用|0\.
     proxies:
+      - DEFAULT
       - DIRECT
-      - GLOBAL
   - name: US
     type: select
     include-all: true
     filter: 🇺🇸
     proxies:
+      - DEFAULT
       - DIRECT
-      - GLOBAL
 
 rule-providers:
   ads:
@@ -150,6 +155,7 @@ rule-providers:
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - GEOIP,lan,DIRECT,no-resolve
   - RULE-SET,force,FORCE
   - RULE-SET,ads,REJECT
   - RULE-SET,reject,REJECT
@@ -167,4 +173,4 @@ rules:
   - RULE-SET,google,US
   - RULE-SET,x,US
   - RULE-SET,youtube,US
-  - MATCH,GLOBAL
+  - MATCH,DEFAULT
