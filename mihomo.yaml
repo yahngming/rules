@@ -42,7 +42,6 @@ dns:
     - "time.*.com"
     - "time.*.gov"
     - "rule-set:cn"
-    - "rule-set:cnip"
     - "rule-set:direct"
     - "rule-set:private"
 
