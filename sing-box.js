@@ -14,11 +14,11 @@ let proxies = await produceArtifact({
 
 config.outbounds.push(...proxies);
 config.outbounds.map(i => {
+	if (['default'].includes(i.tag)) {i.outbounds.push(...getTags(proxies));}
 	if (['force'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建/i));}
 	if (['game'].includes(i.tag)) {i.outbounds.push(...getTags(proxies));}
 	if (['stream'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /自建|实验|日用|0\./i));}
 	if (['us'].includes(i.tag)) {i.outbounds.push(...getTags(proxies, /🇺🇸/i));}
-	if (['default'].includes(i.tag)) {i.outbounds.push(...getTags(proxies));}
 });
 
 $content = JSON.stringify(config, null, 2);
