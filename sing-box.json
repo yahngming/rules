@@ -20,6 +20,9 @@
           "dns.google": [
             "8.8.8.8",
             "8.8.4.4"
+          ],
+          "time.android.com": [
+            "203.107.6.88"
           ]
         }
       },
@@ -120,27 +123,41 @@
     {
       "tag": "default",
       "type": "selector",
-      "outbounds": ["direct"]
+      "outbounds": [
+        "direct"
+      ]
     },
     {
       "tag": "force",
       "type": "selector",
-      "outbounds": ["direct", "default"]
+      "outbounds": [
+        "default",
+        "direct"
+      ]
     },
     {
       "tag": "game",
       "type": "selector",
-      "outbounds": ["direct", "default"]
+      "outbounds": [
+        "default",
+        "direct"
+      ]
     },
     {
       "tag": "stream",
       "type": "selector",
-      "outbounds": ["direct", "default"]
+      "outbounds": [
+        "default",
+        "direct"
+      ]
     },
     {
       "tag": "us",
       "type": "selector",
-      "outbounds": ["direct", "default"]
+      "outbounds": [
+        "default",
+        "direct"
+      ]
     },
     {
       "tag": "direct",
@@ -169,27 +186,50 @@
         "outbound": "default"
       },
       {
-        "rule_set": ["force"],
+        "rule_set": [
+          "force"
+        ],
         "outbound": "force"
       },
       {
-        "rule_set": ["ads", "reject"],
+        "rule_set": [
+          "ads",
+          "reject"
+        ],
         "action": "reject"
       },
       {
-        "rule_set": ["cn", "cnip", "direct", "private"],
+        "rule_set": [
+          "cn",
+          "cnip",
+          "direct",
+          "private"
+        ],
         "outbound": "direct"
       },
       {
-        "rule_set": ["blizzard", "game", "steam"],
+        "rule_set": [
+          "blizzard",
+          "game",
+          "steam"
+        ],
         "outbound": "game"
       },
       {
-        "rule_set": ["emby", "netflix"],
+        "rule_set": [
+          "emby",
+          "netflix"
+        ],
         "outbound": "stream"
       },
       {
-        "rule_set": ["ai", "github", "google", "x", "youtube"],
+        "rule_set": [
+          "ai",
+          "github",
+          "google",
+          "x",
+          "youtube"
+        ],
         "outbound": "us"
       }
     ],
