@@ -68,17 +68,21 @@
         "server": "fakeip"
       },
       {
+        "rule_set": [
+          "cn"
+        ],
+        "server": "local"
+      },
+      {
         "action": "evaluate",
         "server": "direct"
       },
       {
         "match_response": true,
         "rule_set": [
-          "cn",
           "cnip"
         ],
-        "action": "route",
-        "server": "local"
+        "action": "respond"
       }
     ],
     "final": "global",
