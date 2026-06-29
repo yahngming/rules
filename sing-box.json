@@ -292,8 +292,9 @@
         "download_detour": "direct"
       }
     ],
+    "final": "global",
     "auto_detect_interface": true,
-    "default_domain_resolver": "direct"
+    "default_domain_resolver": "local"
   },
   "experimental": {
     "cache_file": {
