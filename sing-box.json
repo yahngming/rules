@@ -45,6 +45,11 @@
     ],
     "rules": [
       {
+        "preferred_by": "hosts",
+        "action": "route",
+        "server": "hosts"
+      },
+      {
         "clash_mode": "direct",
         "server": "local"
       },
