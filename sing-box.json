@@ -13,8 +13,14 @@
         "tag": "hosts",
         "type": "hosts",
         "predefined": {
-          "dns.alidns.com": ["223.5.5.5", "223.6.6.6"],
-          "dns.google": ["8.8.8.8", "8.8.4.4"]
+          "dns.alidns.com": [
+            "223.5.5.5",
+            "223.6.6.6"
+          ],
+          "dns.google": [
+            "8.8.8.8",
+            "8.8.4.4"
+          ]
         }
       },
       {
@@ -59,7 +65,10 @@
       },
       {
         "match_response": true,
-        "rule_set": ["cn", "cnip"]
+        "rule_set": [
+          "cn",
+          "cnip"
+        ],
         "action": "route",
         "server": "local"
       }
@@ -89,6 +98,9 @@
         "10.0.0.0/8",
         "172.16.0.0/12",
         "fc00::/7"
+      ],
+      "route_exclude_address_set": [
+        "cnip"
       ],
       "stack": "mixed"
     },
