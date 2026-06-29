@@ -88,6 +88,16 @@
     "final": "global",
     "strategy": "prefer_ipv4"
   },
+  "http_clients": [
+    {
+      "tag": "default",
+      "detour": "default"
+    },
+    {
+      "tag": "direct",
+      "detour": "direct"
+    }
+  ],
   "inbounds": [
     {
       "tag": "tun",
@@ -110,9 +120,6 @@
         "10.0.0.0/8",
         "172.16.0.0/12",
         "fc00::/7"
-      ],
-      "route_exclude_address_set": [
-        "cnip"
       ],
       "stack": "mixed"
     },
@@ -242,103 +249,103 @@
         "tag": "ads",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "ai",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "blizzard",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-blizzard.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "cn",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "cnip",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "direct",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/direct.json",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "emby",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/emby.json",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "force",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/force.json",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "game",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/game.json",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "github",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "google",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "netflix",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "private",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "reject",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/reject.json",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "steam",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "x",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       },
       {
         "tag": "youtube",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
-        "download_detour": "direct"
+        "http_client": "default"
       }
     ],
     "final": "default",
