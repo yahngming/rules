@@ -6,15 +6,29 @@
   "dns": {
     "servers": [
       {
-        "tag": "global",
-        "type": "https",
-        "server": "1.1.1.1",
-        "detour": "default"
+        "tag": "local",
+        "type": "local"
+      },
+      {
+        "tag": "hosts",
+        "type": "hosts",
+        "predefined": {
+          "dns.alidns.com": ["223.5.5.5", "223.6.6.6"],
+          "dns.google": ["8.8.8.8", "8.8.4.4"]
+        }
       },
       {
         "tag": "direct",
         "type": "udp",
-        "server": "223.5.5.5"
+        "server": "dns.alidns.com",
+        "domain_resolver": "hosts"
+      },
+      {
+        "tag": "global",
+        "type": "https",
+        "server": "dns.google",
+        "domain_resolver": "hosts",
+        "detour": "default"
       },
       {
         "tag": "fakeip",
@@ -26,25 +40,32 @@
     "rules": [
       {
         "clash_mode": "direct",
-        "server": "direct"
+        "server": "local"
       },
       {
         "clash_mode": "global",
-        "server": "fakeip"
-      },
-      {
-        "rule_set": ["cn"],
-        "server": "direct"
+        "server": "global"
       },
       {
         "query_type": [
           "A",
           "AAAA"
         ],
-        "server": "fakeip",
-        "rewrite_ttl": 1
+        "server": "fakeip"
+      },
+      {
+        "action": "evaluate",
+        "server": "direct"
+      },
+      {
+        "match_response": true,
+        "rule_set": ["cn", "cnip"]
+        "action": "route",
+        "server": "local"
       }
-    ]
+    ],
+    "final": "global",
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
