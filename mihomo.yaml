@@ -1,13 +1,5 @@
 hosts:
-  dns.alidns.com:
-    - 223.5.5.5
-    - 223.6.6.6
-  dns.google:
-    - 8.8.8.8
-    - 8.8.4.4
-  time.android.com:
-    - 203.107.6.88
-    - 106.55.184.199
+  time.android.com: 203.107.6.88
 proxy-groups:
   - name: DEFAULT
     type: select
