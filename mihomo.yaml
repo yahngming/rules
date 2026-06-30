@@ -1,8 +1,13 @@
 hosts:
-  dns.alidns.com: [223.5.5.5, 223.6.6.6]
-  dns.google: [8.8.8.8, 8.8.4.4]
-  time.android.com: 203.107.6.88
-
+  dns.alidns.com:
+    - 223.5.5.5
+    - 223.6.6.6
+  dns.google:
+    - 8.8.8.8
+    - 8.8.4.4
+  time.android.com:
+    - 203.107.6.88
+    - 106.55.184.199
 proxy-groups:
   - name: DEFAULT
     include-all: true
@@ -36,7 +41,6 @@ proxy-groups:
     proxies:
       - DEFAULT
       - DIRECT
-
 rule-providers:
   ads:
     type: http
@@ -157,7 +161,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
     path: ./ruleset/youtube.mrs
     interval: 86400
-
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - GEOIP,lan,DIRECT,no-resolve
