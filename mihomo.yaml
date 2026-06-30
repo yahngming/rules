@@ -10,157 +10,140 @@ hosts:
     - 106.55.184.199
 proxy-groups:
   - name: DEFAULT
-    include-all: true
     type: select
     proxies:
       - DIRECT
+    include-all: true
   - name: FORCE
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 自建
-    proxies:
-      - DEFAULT
-      - DIRECT
   - name: GAME
     type: select
-    include-all: true
     proxies:
       - DEFAULT
       - DIRECT
+    include-all: true
   - name: STREAM
     type: select
+    proxies:
+      - DEFAULT
+      - DIRECT
     include-all: true
     filter: 自建|实验|日用|0\.
-    proxies:
-      - DEFAULT
-      - DIRECT
   - name: US
     type: select
-    include-all: true
-    filter: 🇺🇸
     proxies:
       - DEFAULT
       - DIRECT
+    include-all: true
+    filter: 🇺🇸
 rule-providers:
   ads:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
-    path: ./ruleset/ads.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   ai:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
-    path: ./ruleset/ai.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   blizzard:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/blizzard.mrs
-    path: ./ruleset/blizzard.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   cn:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
-    path: ./ruleset/cn.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   cnip:
     type: http
-    format: mrs
-    behavior: ipcidr
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
-    path: ./ruleset/cnip.mrs
     interval: 86400
+    behavior: ipcidr
+    format: mrs
   direct:
     type: http
-    format: text
-    behavior: classical
     url: https://raw.githubusercontent.com/yahngming/rules/master/direct.list
-    path: ./ruleset/direct.list
     interval: 86400
+    behavior: classical
+    format: text
   emby:
     type: http
-    format: text
-    behavior: classical
     url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
-    path: ./ruleset/emby.list
     interval: 86400
+    behavior: classical
+    format: text
   force:
     type: http
-    format: text
-    behavior: classical
     url: https://raw.githubusercontent.com/yahngming/rules/master/force.list
-    path: ./ruleset/force.list
     interval: 86400
+    behavior: classical
+    format: text
   game:
     type: http
-    format: text
-    behavior: classical
     url: https://raw.githubusercontent.com/yahngming/rules/master/game.list
-    path: ./ruleset/game.list
     interval: 86400
+    behavior: classical
+    format: text
   github:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
-    path: ./ruleset/github.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   google:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
-    path: ./ruleset/google.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   netflix:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
-    path: ./ruleset/netflix.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   private:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
-    path: ./ruleset/private.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   reject:
     type: http
-    format: text
-    behavior: classical
     url: https://raw.githubusercontent.com/yahngming/rules/master/reject.list
-    path: ./ruleset/reject.list
     interval: 86400
+    behavior: classical
+    format: text
   steam:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs
-    path: ./ruleset/steam.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   x:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs
-    path: ./ruleset/x.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
   youtube:
     type: http
-    format: mrs
-    behavior: domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
-    path: ./ruleset/youtube.mrs
     interval: 86400
+    behavior: domain
+    format: mrs
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - GEOIP,lan,DIRECT,no-resolve
