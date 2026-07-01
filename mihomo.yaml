@@ -30,6 +30,8 @@ tun:
     - tcp://any:53
 dns:
   enable: true
+  prefer-h3: false
+  respect-rules: true
   enhanced-mode: redir-host
   nameserver:
     - tls://8.8.8.8
