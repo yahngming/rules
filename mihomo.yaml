@@ -13,7 +13,6 @@ hosts:
   time.android.com: 203.107.6.88
 profile:
   store-selected: true
-  store-fake-ip: true
 sniffer:
   enable: true
   sniff:
@@ -21,17 +20,12 @@ sniffer:
       ports:
         - 80
         - 8080-8880
-    QUIC:
-      ports:
-        - 443
-        - 8443
     TLS:
       ports:
         - 443
         - 8443
 tun:
   enable: true
-  stack: system
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
@@ -39,8 +33,6 @@ tun:
 dns:
   enable: true
   enhanced-mode: redir-host
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter: *
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -51,7 +43,7 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver-policy:
-    rule-set:cn,direct,private:
+    geosite:cn,private:
       - 223.5.5.5
       - 119.29.29.29
 proxy-groups:
