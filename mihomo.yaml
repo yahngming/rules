@@ -5,10 +5,6 @@ unified-delay: true
 tcp-concurrent: true
 dns:
   enable: true
-  prefer-h3: false
-  use-hosts: true
-  use-system-hosts: true
-  respect-rules: false
   ipv6: false
   default-nameserver:
     - 114.114.114.114
@@ -16,10 +12,6 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
   nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
-  proxy-server-nameserver:
-    - 114.114.114.114
     - 119.29.29.29
     - 223.5.5.5
   enhanced-mode: fake-ip
