@@ -13,14 +13,6 @@
         "tag": "hosts",
         "type": "hosts",
         "predefined": {
-          "dns.alidns.com": [
-            "223.5.5.5",
-            "223.6.6.6"
-          ],
-          "dns.google": [
-            "8.8.8.8",
-            "8.8.4.4"
-          ],
           "time.android.com": [
             "203.107.6.88"
           ]
@@ -29,21 +21,13 @@
       {
         "tag": "direct",
         "type": "udp",
-        "server": "dns.alidns.com",
-        "domain_resolver": "hosts"
+        "server": "223.5.5.5"
       },
       {
         "tag": "global",
         "type": "https",
-        "server": "dns.google",
-        "domain_resolver": "hosts",
+        "server": "8.8.8.8",
         "detour": "default"
-      },
-      {
-        "tag": "fakeip",
-        "type": "fakeip",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
       }
     ],
     "rules": [
@@ -59,13 +43,6 @@
       {
         "clash_mode": "global",
         "server": "global"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "server": "fakeip"
       },
       {
         "rule_set": [
@@ -362,11 +339,10 @@
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "store_fakeip": true,
       "store_dns": true
     },
     "clash_api": {
-      "external_controller": "127.0.0.1:9090",
+      "external_controller": "0.0.0.0:9090",
       "external_ui": "ui"
     }
   }
