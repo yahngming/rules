@@ -20,10 +20,13 @@ sniffer:
         - 8443
 tun:
   enable: true
+  stack: mixed
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
-  dns-hijack: any:53
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
 dns:
   enable: true
   enhanced-mode: redir-host
@@ -31,7 +34,7 @@ dns:
     - tls://8.8.8.8
     - tls://1.1.1.1
   nameserver-policy:
-    rule-set:cn:
+    "rule-set:cn":
       - 223.5.5.5
       - 119.29.29.29
   proxy-server-nameserver:
@@ -149,6 +152,12 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  privateip:
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
   reject:
     type: http
     url: https://raw.githubusercontent.com/yahngming/rules/master/reject.list
@@ -174,13 +183,14 @@ rule-providers:
     behavior: domain
     format: mrs
 rules:
-  - RULE-SET,private,DIRECT,no-resolve
+  - RULE-SET,privateip,DIRECT,no-resolve
   - RULE-SET,force,FORCE
   - RULE-SET,ads,REJECT
   - RULE-SET,reject,REJECT
   - RULE-SET,cn,DIRECT
   - RULE-SET,cnip,DIRECT
   - RULE-SET,direct,DIRECT
+  - RULE-SET,private,DIRECT
   - RULE-SET,blizzard,GAME
   - RULE-SET,game,GAME
   - RULE-SET,steam,GAME
