@@ -5,10 +5,12 @@ tcp-concurrent: true
 geo-auto-update: true
 geo-update-interval: 24
 geox-url:
-  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
-  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat
+  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
+  asn: https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb
+hosts:
+  time.android.com: 203.107.6.88
 profile:
   store-selected: true
   store-fake-ip: true
@@ -33,19 +35,21 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
-  dns-hijack:
-    - any:53
-    - tcp://any:53
-ntp:
+  dns-hijack: any:53
+dns:
   enable: true
-  write-to-system: false
-  server: time.apple.com
-  port: 123
-  interval: 30
-hosts:
-  dns.alidns.com: 223.5.5.5
-  dns.google: 8.8.8.8
-  time.android.com: 203.107.6.88
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter: *
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
 proxy-groups:
   - name: DEFAULT
     type: select
