@@ -3,8 +3,6 @@ mode: rule
 log-level: warning
 unified-delay: true
 tcp-concurrent: true
-hosts:
-  time.android.com: 203.107.6.88
 dns:
   enable: true
   prefer-h3: false
@@ -13,6 +11,14 @@ dns:
   respect-rules: false
   ipv6: false
   default-nameserver:
+    - 114.114.114.114
+    - 223.5.5.5
+    - 8.8.8.8
+    - 1.1.1.1
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  proxy-server-nameserver:
     - 114.114.114.114
     - 119.29.29.29
     - 223.5.5.5
@@ -33,6 +39,23 @@ dns:
     - "ntp.*"
     - "stun.*"
     - "time.*"
+hosts:
+  time.android.com: 203.107.6.88
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - 8080-8880
+    QUIC:
+      ports:
+        - 443
+        - 8443
+    TLS:
+      ports:
+        - 443
+        - 8443
 proxy-groups:
   - name: DEFAULT
     type: select
