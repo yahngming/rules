@@ -191,6 +191,7 @@ rules:
   - RULE-SET,cnip,DIRECT
   - RULE-SET,direct,DIRECT
   - RULE-SET,private,DIRECT
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
   - RULE-SET,blizzard,GAME
   - RULE-SET,game,GAME
   - RULE-SET,steam,GAME
