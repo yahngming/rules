@@ -38,7 +38,7 @@
       },
       {
         "clash_mode": "direct",
-        "server": "local"
+        "server": "direct"
       },
       {
         "clash_mode": "global",
