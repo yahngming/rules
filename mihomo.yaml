@@ -1,5 +1,38 @@
+port: 7890
+mode: rule
+log-level: warning
+unified-delay: true
+tcp-concurrent: true
 hosts:
   time.android.com: 203.107.6.88
+dns:
+  enable: true
+  prefer-h3: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+  ipv6: false
+  default-nameserver:
+    - 114.114.114.114
+    - 119.29.29.29
+    - 223.5.5.5
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.direct"
+    - "*.example"
+    - "*.home.arpa"
+    - "*.invalid"
+    - "*.lan"
+    - "*.local"
+    - "*.localdomain"
+    - "*.localhost"
+    - "*.test"
+    - "*.ntp.*"
+    - "*.time.*"
+    - "ntp.*"
+    - "stun.*"
+    - "time.*"
 proxy-groups:
   - name: DEFAULT
     type: select
