@@ -4,7 +4,7 @@ function getNames(proxies, regex) {
 	return (regex ? proxies.filter(p => regex.test(p.name)) : proxies).map(p => p.name);
 }
 
-function jsonToYaml(obj, indent = 0) {
+function yaml(obj, indent = 0) {
 	const spaces = ' '.repeat(indent);
 	if (obj === null) return 'null';
 	if (typeof obj === 'boolean' || typeof obj === 'number') return String(obj);
@@ -19,15 +19,15 @@ function jsonToYaml(obj, indent = 0) {
 		if (obj.every(item => typeof item === 'string' || typeof item === 'number')) {
 			return '\n' + obj.map(item => `${spaces}- ${typeof item === 'string' && (item.includes(':') || item.includes(',')) ? `"${item}"` : item}`).join('\n');
 		}
-		return '\n' + obj.map(item => `${spaces}- ${jsonToYaml(item, indent + 2).trim()}`).join('\n');
+		return '\n' + obj.map(item => `${spaces}- ${yaml(item, indent + 2).trim()}`).join('\n');
 	}
 	if (typeof obj === 'object') {
 		return '\n' + Object.keys(obj).map(key => {
 			const val = obj[key];
 			if (typeof val === 'object' && val !== null) {
-				return `${spaces}${key}:${jsonToYaml(val, indent + 2)}`;
+				return `${spaces}${key}:${yaml(val, indent + 2)}`;
 			}
-			return `${spaces}${key}: ${jsonToYaml(val, indent)}`;
+			return `${spaces}${key}: ${yaml(val, indent)}`;
 		}).join('\n');
 	}
 	return '';
@@ -103,4 +103,4 @@ config['proxy-groups'].map(i => {
 	if (['US'].includes(i.name)) { i.proxies.push(...getNames(proxies, /🇺🇸/i)); }
 });
 
-$content = jsonToYaml(config).trim();
+$content = yaml(config).trim();
