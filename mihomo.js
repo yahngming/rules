@@ -1,12 +1,10 @@
-const YAML = require('yaml');
-
 const { name, type } = $arguments;
 
 function getNames(proxies, regex) {
 	return (regex ? proxies.filter(p => regex.test(p.name)) : proxies).map(p => p.name);
 }
 
-let config = YAML.parse($files[0]);
+let config = $yaml.load($files[0]);
 let proxies = await produceArtifact({
 	name,
 	type: /^1$|col/i.test(type) ? "collection" : "subscription",
@@ -16,11 +14,12 @@ let proxies = await produceArtifact({
 
 config.proxies.push(...proxies);
 config['proxy-groups'].map(i => {
-	if (['DEFAULT'].includes(i.name)) { i.proxies.push(...getNames(proxies)); }
-	if (['FORCE'].includes(i.name)) { i.proxies.push(...getNames(proxies, /自建/i)); }
-	if (['GAME'].includes(i.name)) { i.proxies.push(...getNames(proxies)); }
-	if (['STREAM'].includes(i.name)) { i.proxies.push(...getNames(proxies, /自建|实验|日用|0\./i)); }
-	if (['US'].includes(i.name)) { i.proxies.push(...getNames(proxies, /🇺🇸/i)); }
+	const groupName = i.name.toLowerCase();
+	if (['default'].includes(groupName)) { i.proxies.push(...getNames(proxies)); }
+	if (['force'].includes(groupName)) { i.proxies.push(...getNames(proxies, /自建/i)); }
+	if (['game'].includes(groupName)) { i.proxies.push(...getNames(proxies)); }
+	if (['stream'].includes(groupName)) { i.proxies.push(...getNames(proxies, /自建|实验|日用|0\./i)); }
+	if (['us'].includes(groupName)) { i.proxies.push(...getNames(proxies, /🇺🇸/i)); }
 });
 
-$content = YAML.stringify(config);
+$content = $yaml.dump(config);
