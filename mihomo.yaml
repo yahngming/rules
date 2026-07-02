@@ -30,16 +30,23 @@ dns:
   enable: true
   respect-rules: true
   enhanced-mode: redir-host
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter: "+.*"
+  default-nameserver: system
+  proxy-server-nameserver: system
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.google/dns-query
   nameserver:
-    - https://8.8.8.8/dns-query
-    - https://1.1.1.1/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
   nameserver-policy:
-    rule-set:cn:
-      - 223.5.5.5
-      - 119.29.29.29
-  proxy-server-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
+    "rule-set:cn":
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+    "+.*":
+      - https://cloudflare-dns.com/dns-query
+      - https://dns.google/dns-query
 proxy-groups:
   - name: DEFAULT
     type: select
