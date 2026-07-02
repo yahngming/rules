@@ -24,29 +24,26 @@ tun:
   auto-redirect: true
   auto-detect-interface: true
   dns-hijack:
-    - 'any:53'
-    - 'tcp://any:53'
+    - any:53
+    - tcp://any:53
 dns:
   enable: true
+  prefer-h3: false
   respect-rules: true
   enhanced-mode: redir-host
-  fake-ip-filter-mode: blacklist
-  fake-ip-filter: '+.*'
-  default-nameserver: system
-  proxy-server-nameserver: system
-  direct-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://dns.google/dns-query
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
   nameserver:
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
   nameserver-policy:
-    'rule-set:cn':
+    rule-set:cn:
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
-    '+.*':
-      - https://cloudflare-dns.com/dns-query
-      - https://dns.google/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
 proxy-groups:
   - name: DEFAULT
     type: select
