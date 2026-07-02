@@ -24,14 +24,14 @@ tun:
   auto-redirect: true
   auto-detect-interface: true
   dns-hijack:
-    - any:53
-    - tcp://any:53
+    - 'any:53'
+    - 'tcp://any:53'
 dns:
   enable: true
   respect-rules: true
   enhanced-mode: redir-host
   fake-ip-filter-mode: blacklist
-  fake-ip-filter: "+.*"
+  fake-ip-filter: '+.*'
   default-nameserver: system
   proxy-server-nameserver: system
   direct-nameserver:
@@ -41,10 +41,10 @@ dns:
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
   nameserver-policy:
-    "rule-set:cn":
+    'rule-set:cn':
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
-    "+.*":
+    '+.*':
       - https://cloudflare-dns.com/dns-query
       - https://dns.google/dns-query
 proxy-groups:
