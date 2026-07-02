@@ -4,7 +4,25 @@ function getNames(proxies, regex) {
 	return (regex ? proxies.filter(p => regex.test(p.name)) : proxies).map(p => p.name);
 }
 
-function yaml(obj, indent = 0) {
+function cleanProxy(proxy) {
+	const cleaned = {};
+	for (const key in proxy) {
+		if (key.startsWith('_')) continue;
+		const value = proxy[key];
+		if (value === '' || value === null || value === undefined) continue;
+		if (typeof value === 'object' && !Array.isArray(value)) {
+			const nestedCleaned = cleanProxy(value);
+			if (Object.keys(nestedCleaned).length > 0) {
+				cleaned[key] = nestedCleaned;
+			}
+		} else {
+			cleaned[key] = value;
+		}
+	}
+	return cleaned;
+}
+
+function toYaml(obj, indent = 0) {
 	const spaces = ' '.repeat(indent);
 	if (obj === null) return 'null';
 	if (typeof obj === 'boolean' || typeof obj === 'number') return String(obj);
@@ -19,15 +37,15 @@ function yaml(obj, indent = 0) {
 		if (obj.every(item => typeof item === 'string' || typeof item === 'number')) {
 			return '\n' + obj.map(item => `${spaces}- ${typeof item === 'string' && (item.includes(':') || item.includes(',')) ? `"${item}"` : item}`).join('\n');
 		}
-		return '\n' + obj.map(item => `${spaces}- ${yaml(item, indent + 2).trim()}`).join('\n');
+		return '\n' + obj.map(item => `${spaces}- ${toYaml(item, indent + 2).trim()}`).join('\n');
 	}
 	if (typeof obj === 'object') {
 		return '\n' + Object.keys(obj).map(key => {
 			const val = obj[key];
 			if (typeof val === 'object' && val !== null) {
-				return `${spaces}${key}:${yaml(val, indent + 2)}`;
+				return `${spaces}${key}:${toYaml(val, indent + 2)}`;
 			}
-			return `${spaces}${key}: ${yaml(val, indent)}`;
+			return `${spaces}${key}: ${toYaml(val, indent)}`;
 		}).join('\n');
 	}
 	return '';
@@ -88,19 +106,22 @@ let config = {
   ]
 };
 let proxies = await produceArtifact({
-	name,
-	type: /^1$|col/i.test(type) ? "collection" : "subscription",
-	platform: "mihomo", 
-	produceType: "internal",
+    name,
+    type: /^1$|col/i.test(type) ? "collection" : "subscription",
+    platform: "mihomo", 
+    produceType: "internal",
 });
 
-config.proxies.push(...proxies);
-config['proxy-groups'].map(i => {
-	if (['DEFAULT'].includes(i.name)) { i.proxies.push(...getNames(proxies)); }
-	if (['FORCE'].includes(i.name)) { i.proxies.push(...getNames(proxies, /自建/i)); }
-	if (['GAME'].includes(i.name)) { i.proxies.push(...getNames(proxies)); }
-	if (['STREAM'].includes(i.name)) { i.proxies.push(...getNames(proxies, /自建|实验|日用|0\./i)); }
-	if (['US'].includes(i.name)) { i.proxies.push(...getNames(proxies, /🇺🇸/i)); }
-});
+const cleanedProxies = proxies.map(p => cleanProxy(p));
+config.proxies.push(...cleanedProxies);
+if (config['proxy-groups']) {
+	config['proxy-groups'].map(i => {
+		if (['DEFAULT'].includes(i.name)) { i.proxies.push(...getNames(proxies)); }
+		if (['FORCE'].includes(i.name)) { i.proxies.push(...getNames(proxies, /自建/i)); }
+		if (['GAME'].includes(i.name)) { i.proxies.push(...getNames(proxies)); }
+		if (['STREAM'].includes(i.name)) { i.proxies.push(...getNames(proxies, /自建|实验|日用|0\./i)); }
+		if (['US'].includes(i.name)) { i.proxies.push(...getNames(proxies, /🇺🇸/i)); }
+	});
+}
 
-$content = yaml(config).trim();
+$content = toYaml(config).trim();
