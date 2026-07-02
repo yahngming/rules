@@ -1,48 +1,5 @@
-log-level: warning
-mixed-port: 7890
-external-controller: 0.0.0.0:9090
-external-ui: ui
 hosts:
   time.android.com: 203.107.6.88
-profile:
-  store-selected: true
-sniffer:
-  enable: true
-  sniff:
-    HTTP:
-      ports:
-        - 80
-        - 8080-8880
-    TLS:
-      ports:
-        - 443
-        - 8443
-tun:
-  enable: true
-  stack: mixed
-  auto-route: true
-  auto-redirect: true
-  auto-detect-interface: true
-  dns-hijack:
-    - any:53
-    - tcp://any:53
-dns:
-  enable: true
-  prefer-h3: false
-  respect-rules: true
-  enhanced-mode: redir-host
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver:
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
-  proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  direct-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
 proxy-groups:
   - name: DEFAULT
     type: select
