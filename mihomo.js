@@ -1,3 +1,5 @@
+const YAML = require('yaml');
+
 const { name, type } = $arguments;
 
 function getNames(proxies, regex) {
