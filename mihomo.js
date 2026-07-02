@@ -14,12 +14,11 @@ let proxies = await produceArtifact({
 
 config.proxies.push(...proxies);
 config['proxy-groups'].map(i => {
-	const groupName = i.name.toLowerCase();
-	if (['default'].includes(groupName)) { i.proxies.push(...getNames(proxies)); }
-	if (['force'].includes(groupName)) { i.proxies.push(...getNames(proxies, /自建/i)); }
-	if (['game'].includes(groupName)) { i.proxies.push(...getNames(proxies)); }
-	if (['stream'].includes(groupName)) { i.proxies.push(...getNames(proxies, /自建|实验|日用|0\./i)); }
-	if (['us'].includes(groupName)) { i.proxies.push(...getNames(proxies, /🇺🇸/i)); }
+	if (['DEFAULT'].includes(i.name)) { i.proxies.push(...getNames(proxies)); }
+	if (['FORCE'].includes(i.name)) { i.proxies.push(...getNames(proxies, /自建/i)); }
+	if (['GAME'].includes(i.name)) { i.proxies.push(...getNames(proxies)); }
+	if (['STREAM'].includes(i.name)) { i.proxies.push(...getNames(proxies, /自建|实验|日用|0\./i)); }
+	if (['US'].includes(i.name)) { i.proxies.push(...getNames(proxies, /🇺🇸/i)); }
 });
 
 $content = $yaml.dump(config);
