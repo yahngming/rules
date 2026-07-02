@@ -2,15 +2,12 @@ log-level: warning
 mixed-port: 7890
 external-controller: 0.0.0.0:9090
 external-ui: ui
-unified-delay: true
-tcp-concurrent: true
 hosts:
   time.android.com: 203.107.6.88
 profile:
   store-selected: true
 sniffer:
   enable: true
-  override-destination: false
   sniff:
     HTTP:
       ports:
@@ -22,7 +19,7 @@ sniffer:
         - 8443
 tun:
   enable: true
-  stack: system
+  stack: mixed
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
@@ -31,7 +28,6 @@ tun:
     - tcp://any:53
 dns:
   enable: true
-  prefer-h3: false
   respect-rules: true
   enhanced-mode: redir-host
   nameserver:
