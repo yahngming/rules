@@ -29,7 +29,6 @@ tun:
 dns:
   enable: true
   prefer-h3: false
-  respect-rules: true
   enhanced-mode: redir-host
   default-nameserver:
     - 223.5.5.5
@@ -37,10 +36,9 @@ dns:
   nameserver:
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
-  nameserver-policy:
-    rule-set:cn:
-      - https://dns.alidns.com/dns-query
-      - https://doh.pub/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
 proxy-groups:
   - name: DEFAULT
     type: select
