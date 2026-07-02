@@ -4,7 +4,7 @@ function getNames(proxies, regex) {
 	return (regex ? proxies.filter(p => regex.test(p.name)) : proxies).map(p => p.name);
 }
 
-let config = $yaml.load($files[0]);
+let config = $clash.parse($files[0]);
 let proxies = await produceArtifact({
 	name,
 	type: /^1$|col/i.test(type) ? "collection" : "subscription",
@@ -21,4 +21,4 @@ config['proxy-groups'].map(i => {
 	if (['US'].includes(i.name)) { i.proxies.push(...getNames(proxies, /🇺🇸/i)); }
 });
 
-$content = $yaml.dump(config);
+$content = $clash.stringify(config);
