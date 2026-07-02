@@ -5,34 +5,26 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-    include-all: true
   - name: FORCE
     type: select
     proxies:
       - DEFAULT
       - DIRECT
-    include-all: true
-    filter: 自建
   - name: GAME
     type: select
     proxies:
       - DEFAULT
       - DIRECT
-    include-all: true
   - name: STREAM
     type: select
     proxies:
       - DEFAULT
       - DIRECT
-    include-all: true
-    filter: 自建|实验|日用|0\.
   - name: US
     type: select
     proxies:
       - DEFAULT
       - DIRECT
-    include-all: true
-    filter: 🇺🇸
 rule-providers:
   ads:
     type: http
