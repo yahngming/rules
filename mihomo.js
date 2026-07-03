@@ -52,6 +52,11 @@ function toYaml(obj, indent = 0) {
 }
 
 let config = {
+  "mixed-port": 7890,
+  "external-controller": "0.0.0.0:9090",
+  "external-ui": "ui",
+  "unified-delay": true,
+  "tcp-concurrent": true,
   "hosts": {
     "time.android.com": "203.107.6.88"
   },
