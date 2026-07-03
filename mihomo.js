@@ -18,36 +18,25 @@ function cleanProxy(proxy) {
 	return cleaned;
 }
 
-const baseContent = $content ?? (typeof $files !== 'undefined' ? $files[0] : "");
-const config = ProxyUtils.yaml.safeLoad(baseContent);
-let clashMetaProxies = await produceArtifact({
+let baseContent = $content ?? (typeof $files !== 'undefined' ? $files[0] : "");
+let config = ProxyUtils.yaml.safeLoad(baseContent);
+let proxies = await produceArtifact({
 	name,
 	type: /^1$|col/i.test(type) ? "collection" : "subscription",
-	platform: 'ClashMeta',
+	platform: 'mihomo',
 	produceType: 'internal' 
 });
-const dynamicNodes = (clashMetaProxies || [])
+let cleanProxies = (proxies || [])
 	.filter(p => p.type && p.type !== 'select')
 	.map(p => cleanProxy(p));
 
-config.proxies.push(...dynamicNodes);
+config.proxies.push(...cleanProxies);
 config['proxy-groups'] = config['proxy-groups'].map(group => {
-	if (['DEFAULT'].includes(group.name)) {
-		group.proxies.push(...getNames(dynamicNodes));
-	}
-	else if (['FORCE'].includes(group.name)) {
-		group.proxies.push(...getNames(dynamicNodes, /自建/i));
-	}
-	else if (['GAME'].includes(group.name)) {
-		group.proxies.push(...getNames(dynamicNodes));
-	}
-	else if (['STREAM'].includes(group.name)) {
-		group.proxies.push(...getNames(dynamicNodes, /自建|实验|日用|0\./i));
-	}
-	else if (['US'].includes(group.name)) {
-		group.proxies.push(...getNames(dynamicNodes, /🇺🇸/i));
-	}
-	return group;
+	if (['DEFAULT'].includes(group.name)) {group.proxies.push(...getNames(cleanProxies));}
+	if (['FORCE'].includes(group.name)) {group.proxies.push(...getNames(cleanProxies, /自建/i));}
+	if (['GAME'].includes(group.name)) {group.proxies.push(...getNames(cleanProxies));}
+	if (['STREAM'].includes(group.name)) {group.proxies.push(...getNames(cleanProxies, /自建|实验|日用|0\./i));}
+	if (['US'].includes(group.name)) {group.proxies.push(...getNames(cleanProxies, /🇺🇸/i));}
 });
 
 $content = ProxyUtils.yaml.dump(config);
