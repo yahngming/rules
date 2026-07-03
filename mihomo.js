@@ -37,6 +37,7 @@ config['proxy-groups'] = config['proxy-groups'].map(group => {
 	if (['GAME'].includes(group.name)) {group.proxies.push(...getNames(cleanProxies));}
 	if (['STREAM'].includes(group.name)) {group.proxies.push(...getNames(cleanProxies, /自建|实验|日用|0\./i));}
 	if (['US'].includes(group.name)) {group.proxies.push(...getNames(cleanProxies, /🇺🇸/i));}
+	return group;
 });
 
 $content = ProxyUtils.yaml.dump(config);
