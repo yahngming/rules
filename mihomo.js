@@ -2,8 +2,7 @@ function getNames(proxies, regex) {
 	return (regex ? proxies.filter(p => regex.test(p.name)) : proxies).map(p => p.name);
 }
 
-let baseContent = $content ?? (typeof $files !== 'undefined' ? $files[0] : "");
-let config = ProxyUtils.yaml.safeLoad(baseContent);
+let config = ProxyUtils.yaml.safeLoad($content ?? (typeof $files !== 'undefined' ? $files[0] : ""));
 let proxies = config.proxies.filter(p => p.type && p.type !== 'select');
 
 config['proxy-groups'] = (config['proxy-groups'] || []).map(group => {
