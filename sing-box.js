@@ -5,12 +5,7 @@ function getTags(proxies, regex) {
 }
 
 let config = JSON.parse($files[0]);
-let proxies = await produceArtifact({
-	name,
-	type: /^1$|col/i.test(type) ? "collection" : "subscription",
-	platform: "sing-box",
-	produceType: "internal",
-});
+let proxies = await produceArtifact({ name, type, platform: "sing-box", produceType: "internal" });
 
 config.outbounds.push(...proxies);
 config.outbounds.map(i => {
