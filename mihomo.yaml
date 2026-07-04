@@ -105,12 +105,6 @@ rule-providers:
     format: mrs
   private:
     type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
-  privateip:
-    type: http
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs
     interval: 86400
     behavior: ipcidr
@@ -133,15 +127,8 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  youtube:
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
 rules:
-  - RULE-SET,privateip,DIRECT,no-resolve
-  - RULE-SET,private,DIRECT
+  - RULE-SET,private,DIRECT,no-resolve
   - RULE-SET,direct,DIRECT
   - RULE-SET,force,FORCE
   - RULE-SET,ads,REJECT
@@ -155,7 +142,6 @@ rules:
   - RULE-SET,github,US
   - RULE-SET,google,US
   - RULE-SET,x,US
-  - RULE-SET,youtube,US
   - RULE-SET,cn,DIRECT
   - RULE-SET,cnip,DIRECT,no-resolve
   - MATCH,DEFAULT
