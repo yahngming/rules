@@ -141,13 +141,11 @@ rule-providers:
     format: mrs
 rules:
   - RULE-SET,privateip,DIRECT,no-resolve
+  - RULE-SET,private,DIRECT
+  - RULE-SET,direct,DIRECT
   - RULE-SET,force,FORCE
   - RULE-SET,ads,REJECT
   - RULE-SET,reject,REJECT
-  - RULE-SET,cn,DIRECT
-  - RULE-SET,cnip,DIRECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,private,DIRECT
   - RULE-SET,blizzard,GAME
   - RULE-SET,game,GAME
   - RULE-SET,steam,GAME
@@ -158,4 +156,6 @@ rules:
   - RULE-SET,google,US
   - RULE-SET,x,US
   - RULE-SET,youtube,US
+  - RULE-SET,cn,DIRECT
+  - RULE-SET,cnip,DIRECT,no-resolve
   - MATCH,DEFAULT
