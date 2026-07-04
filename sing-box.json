@@ -216,8 +216,7 @@
           "ai",
           "github",
           "google",
-          "x",
-          "youtube"
+          "x"
         ],
         "outbound": "us"
       },
@@ -324,12 +323,6 @@
         "tag": "x",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs",
-        "http_client": "default"
-      },
-      {
-        "tag": "youtube",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
         "http_client": "default"
       }
     ],
