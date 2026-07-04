@@ -169,16 +169,23 @@
         "action": "hijack-dns"
       },
       {
-        "ip_is_private": true,
-        "outbound": "direct"
-      },
-      {
         "clash_mode": "direct",
         "outbound": "direct"
       },
       {
         "clash_mode": "global",
         "outbound": "default"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "direct",
+          "private"
+        ],
+        "outbound": "direct"
       },
       {
         "rule_set": [
@@ -192,15 +199,6 @@
           "reject"
         ],
         "action": "reject"
-      },
-      {
-        "rule_set": [
-          "cn",
-          "cnip",
-          "direct",
-          "private"
-        ],
-        "outbound": "direct"
       },
       {
         "rule_set": [
@@ -226,6 +224,13 @@
           "youtube"
         ],
         "outbound": "us"
+      },
+      {
+        "rule_set": [
+          "cn",
+          "cnip"
+        ],
+        "outbound": "direct"
       }
     ],
     "rule_set": [
