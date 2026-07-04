@@ -63,12 +63,7 @@
   },
   "http_clients": [
     {
-      "tag": "default",
       "detour": "default"
-    },
-    {
-      "tag": "direct",
-      "detour": "direct"
     }
   ],
   "inbounds": [
