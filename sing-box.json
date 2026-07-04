@@ -2,12 +2,12 @@
   "dns": {
     "servers": [
       {
-        "tag": "local",
-        "type": "local"
+        "type": "local",
+        "tag": "local"
       },
       {
-        "tag": "hosts",
         "type": "hosts",
+        "tag": "hosts",
         "predefined": {
           "time.android.com": [
             "203.107.6.88"
@@ -15,13 +15,13 @@
         }
       },
       {
-        "tag": "direct",
         "type": "udp",
+        "tag": "direct",
         "server": "223.5.5.5"
       },
       {
-        "tag": "global",
         "type": "https",
+        "tag": "global",
         "server": "8.8.8.8",
         "detour": "default"
       }
@@ -73,8 +73,8 @@
   ],
   "inbounds": [
     {
-      "tag": "tun",
       "type": "tun",
+      "tag": "tun",
       "address": [
         "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
@@ -104,55 +104,55 @@
       }
     },
     {
-      "tag": "mixed",
       "type": "mixed",
+      "tag": "mixed",
       "listen": "127.0.0.1",
       "listen_port": 7890
     }
   ],
   "outbounds": [
     {
+      "type": "selector",
       "tag": "default",
-      "type": "selector",
       "outbounds": [
         "direct"
       ]
     },
     {
+      "type": "selector",
       "tag": "force",
-      "type": "selector",
       "outbounds": [
         "default",
         "direct"
       ]
     },
     {
+      "type": "selector",
       "tag": "game",
-      "type": "selector",
       "outbounds": [
         "default",
         "direct"
       ]
     },
     {
+      "type": "selector",
       "tag": "stream",
-      "type": "selector",
       "outbounds": [
         "default",
         "direct"
       ]
     },
     {
+      "type": "selector",
       "tag": "us",
-      "type": "selector",
       "outbounds": [
         "default",
         "direct"
       ]
     },
     {
-      "tag": "direct",
-      "type": "direct"
+      "type": "direct",
+      "tag": "direct"
     }
   ],
   "route": {
@@ -230,100 +230,84 @@
     ],
     "rule_set": [
       {
+        "type": "remote",
         "tag": "ads",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs"
       },
       {
+        "type": "remote",
         "tag": "ai",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs"
       },
       {
+        "type": "remote",
         "tag": "blizzard",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-blizzard.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-blizzard.srs"
       },
       {
+        "type": "remote",
         "tag": "cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs"
       },
       {
+        "type": "remote",
         "tag": "cnip",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
       },
       {
+        "type": "remote",
         "tag": "direct",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/direct.json",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/direct.json"
       },
       {
+        "type": "remote",
         "tag": "emby",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/emby.json",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/emby.json"
       },
       {
+        "type": "remote",
         "tag": "force",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/force.json",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/force.json"
       },
       {
+        "type": "remote",
         "tag": "game",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/game.json",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/game.json"
       },
       {
+        "type": "remote",
         "tag": "github",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs"
       },
       {
+        "type": "remote",
         "tag": "google",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
       },
       {
+        "type": "remote",
         "tag": "netflix",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
       },
       {
+        "type": "remote",
         "tag": "private",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs"
       },
       {
+        "type": "remote",
         "tag": "reject",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/reject.json",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/reject.json"
       },
       {
+        "type": "remote",
         "tag": "steam",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs",
-        "http_client": "default"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
       },
       {
-        "tag": "x",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs",
-        "http_client": "default"
+        "tag": "x",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs"
       }
     ],
     "final": "default",
