@@ -5,6 +5,22 @@ unified-delay: true
 tcp-concurrent: true
 hosts:
   time.android.com: 203.107.6.88
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+    - 223.5.5.5
+sniffer:
+  enable: false
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - 8080-8880
+    TLS:
+      ports:
+        - 443
+        - 8443
 tun:
   enable: true
   stack: mixed
