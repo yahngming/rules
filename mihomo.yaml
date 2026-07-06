@@ -11,7 +11,7 @@ dns:
   nameserver:
     - 223.5.5.5
 sniffer:
-  enable: false
+  enable: true
   sniff:
     HTTP:
       ports:
