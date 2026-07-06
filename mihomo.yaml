@@ -5,6 +5,16 @@ unified-delay: true
 tcp-concurrent: true
 hosts:
   time.android.com: 203.107.6.88
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  strict-route: true
 proxy-groups:
   - name: DEFAULT
     type: select
