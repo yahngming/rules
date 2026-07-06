@@ -3,6 +3,8 @@ external-controller: 0.0.0.0:9090
 external-ui: ui
 unified-delay: true
 tcp-concurrent: true
+profile:
+  store-selected: true
 hosts:
   time.android.com: 203.107.6.88
 dns:
