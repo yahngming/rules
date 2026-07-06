@@ -90,20 +90,7 @@
         "172.16.0.0/12",
         "fc00::/7"
       ],
-      "stack": "mixed",
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 7890
-        }
-      }
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed",
-      "listen": "127.0.0.1",
-      "listen_port": 7890
+      "stack": "mixed"
     }
   ],
   "outbounds": [
