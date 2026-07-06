@@ -3,15 +3,11 @@ external-controller: 0.0.0.0:9090
 external-ui: ui
 unified-delay: true
 tcp-concurrent: true
-profile:
-  store-selected: true
 hosts:
   time.android.com: 203.107.6.88
 dns:
   enable: true
   ipv6: false
-  default-nameserver:
-    - 223.5.5.5
   nameserver:
     - https://8.8.8.8/dns-query#DEFAULT
   nameserver-policy:
