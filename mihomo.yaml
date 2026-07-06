@@ -8,8 +8,13 @@ hosts:
 dns:
   enable: true
   ipv6: false
-  nameserver:
+  default-nameserver:
     - 223.5.5.5
+  nameserver:
+    - https://8.8.8.8/dns-query#DEFAULT
+  nameserver-policy:
+    rule-set:cn:
+      - 223.5.5.5
 sniffer:
   enable: true
   sniff:
