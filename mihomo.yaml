@@ -8,11 +8,13 @@ hosts:
 dns:
   enable: true
   ipv6: false
-  nameserver:
-    - https://8.8.8.8/dns-query#DEFAULT
   nameserver-policy:
     rule-set:cn:
       - 223.5.5.5
+  nameserver:
+    - https://8.8.8.8/dns-query#DEFAULT
+  proxy-server-nameserver:
+      - 119.29.29.29
 sniffer:
   enable: true
   sniff:
