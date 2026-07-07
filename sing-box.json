@@ -177,8 +177,7 @@
       },
       {
         "rule_set": [
-          "emby",
-          "netflix"
+          "emby"
         ],
         "outbound": "stream"
       },
@@ -254,11 +253,6 @@
         "type": "remote",
         "tag": "google",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
-      },
-      {
-        "type": "remote",
-        "tag": "netflix",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
       },
       {
         "type": "remote",
