@@ -128,13 +128,7 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
-  netflix:
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
-    interval: 86400
-    behavior: domain
-    format: mrs
-  private:
+  privateip:
     type: http
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs
     interval: 86400
@@ -159,7 +153,7 @@ rule-providers:
     behavior: domain
     format: mrs
 rules:
-  - RULE-SET,private,DIRECT,no-resolve
+  - RULE-SET,privateip,DIRECT,no-resolve
   - RULE-SET,direct,DIRECT
   - RULE-SET,force,FORCE
   - RULE-SET,ads,REJECT
@@ -168,7 +162,6 @@ rules:
   - RULE-SET,game,GAME
   - RULE-SET,steam,GAME
   - RULE-SET,emby,STREAM
-  - RULE-SET,netflix,STREAM
   - RULE-SET,ai,US
   - RULE-SET,github,US
   - RULE-SET,google,US
