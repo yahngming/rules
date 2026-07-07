@@ -149,8 +149,7 @@
       },
       {
         "rule_set": [
-          "direct",
-          "private"
+          "direct"
         ],
         "outbound": "direct"
       },
@@ -253,11 +252,6 @@
         "type": "remote",
         "tag": "google",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
-      },
-      {
-        "type": "remote",
-        "tag": "private",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs"
       },
       {
         "type": "remote",
