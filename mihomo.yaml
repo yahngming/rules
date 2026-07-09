@@ -14,7 +14,7 @@ dns:
   nameserver:
     - https://8.8.8.8/dns-query#DEFAULT
   proxy-server-nameserver:
-      - 223.5.5.5
+      - 127.0.0.1
 sniffer:
   enable: true
   sniff:
