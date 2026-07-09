@@ -9,10 +9,6 @@ dns:
   enable: true
   ipv6: false
   nameserver-policy:
-    .apt-agent.com:
-      - 127.0.0.1
-    .11229163.xyz:
-      - 127.0.0.1
     rule-set:cn:
       - 223.5.5.5
   nameserver:
