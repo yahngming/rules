@@ -34,7 +34,7 @@
       },
       {
         "clash_mode": "direct",
-        "server": "direct"
+        "server": "local"
       },
       {
         "clash_mode": "global",
@@ -44,7 +44,7 @@
         "rule_set": [
           "cn"
         ],
-        "server": "direct"
+        "server": "local"
       },
       {
         "action": "evaluate",
