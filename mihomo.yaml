@@ -8,6 +8,8 @@ hosts:
 dns:
   enable: true
   ipv6: false
+  proxy-server-nameserver:
+    - 223.5.5.5
   nameserver-policy:
     .11229163.xyz:
       - 223.5.5.5
@@ -17,8 +19,6 @@ dns:
       - 223.5.5.5
   nameserver:
     - https://8.8.8.8/dns-query#DEFAULT
-  proxy-server-nameserver:
-    - 127.0.0.1
 sniffer:
   enable: true
   sniff:
