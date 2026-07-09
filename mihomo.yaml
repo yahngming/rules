@@ -11,6 +11,8 @@ dns:
   proxy-server-nameserver:
     - 127.0.0.1
     - 223.5.5.5
+  direct-nameserver:
+    - 223.5.5.5
   nameserver-policy:
     .11229163.xyz:
       - 223.5.5.5
