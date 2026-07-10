@@ -3,6 +3,8 @@
   "rules": [
     {
       "domain_suffix": [
+        "11229163.xyz",
+        "apt-agent.com",
         "ipapi.co",
         "wttr.in"
       ],
