@@ -14,9 +14,7 @@ dns:
   direct-nameserver:
     - 223.5.5.5
   nameserver-policy:
-    .11229163.xyz:
-      - 223.5.5.5
-    .apt-agent.com:
+    rule-set:direct:
       - 223.5.5.5
     rule-set:cn:
       - 223.5.5.5
