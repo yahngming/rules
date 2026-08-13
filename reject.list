@@ -1,5 +1,5 @@
 #overwatch
-#https://github.com/stowmyy/dropship/blob/main/dropship/dropship/src/core/Settings.h
+#https://github.com/stowmyy/dropship/blob/main/scripts/ips/overwatch.js
 #ams1
 IP-CIDR,64.224.26.0/23,no-resolve
 #gbr1
