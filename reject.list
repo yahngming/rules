@@ -97,6 +97,7 @@ IP-CIDR,2600:1900:4090::/44,no-resolve
 IP-CIDR,64.224.24.0/23,no-resolve
 #ord1
 IP-CIDR,24.105.40.0/21,no-resolve
+IP-CIDR,24.105.60.0/21,no-resolve
 IP-CIDR,64.224.0.0/21,no-resolve
 #syd2
 IP-CIDR,158.115.196.0/23,no-resolve
