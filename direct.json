@@ -2,8 +2,10 @@
   "version": 5,
   "rules": [
     {
+      "domain_keyword": [
+        "array2026"
+      ],
       "domain_suffix": [
-        "array2026.cc",
         "gstatic.cn",
         "ipapi.co",
         "wttr.in"
