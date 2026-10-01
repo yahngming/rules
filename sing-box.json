@@ -201,7 +201,7 @@
       {
         "type": "remote",
         "tag": "ads",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs"
+        "url": "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksingbox.srs"
       },
       {
         "type": "remote",
