@@ -69,7 +69,7 @@ proxy-groups:
 rule-providers:
   ads:
     type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
+    url: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.mrs
     interval: 86400
     behavior: domain
     format: mrs
