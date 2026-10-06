@@ -1,9 +1,18 @@
 #redmoonadvanced
 DOMAIN-SUFFIX,rmadvanced.com
 
-#overwatch
+#blizzard
+IP-CIDR,103.198.32.0/24,no-resolve
+IP-CIDR,103.198.33.0/24,no-resolve
 IP-CIDR,103.4.114.0/24,no-resolve
-IP-CIDR,24.105.60.0/24,no-resolve
+IP-CIDR,103.4.115.0/24,no-resolve
+IP-CIDR,202.9.66.0/23,no-resolve
+IP-CIDR,37.244.40.0/22,no-resolve
+IP-CIDR,5.42.160.0/22,no-resolve
+IP-CIDR,5.42.164.0/22,no-resolve
+IP-CIDR,59.153.40.0/24,no-resolve
+IP-CIDR,59.153.41.0/24,no-resolve
+IP-CIDR,59.153.42.0/23,no-resolve
 
 #turtlewow
 IP-CIDR,178.249.208.0/24,no-resolve
