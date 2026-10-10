@@ -103,12 +103,6 @@ rule-providers:
     interval: 86400
     behavior: classical
     format: text
-  emby:
-    type: http
-    url: https://raw.githubusercontent.com/yahngming/rules/master/emby.list
-    interval: 86400
-    behavior: classical
-    format: text
   force:
     type: http
     url: https://raw.githubusercontent.com/yahngming/rules/master/force.list
@@ -151,6 +145,12 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: mrs
+  stream:
+    type: http
+    url: https://raw.githubusercontent.com/yahngming/rules/master/stream.list
+    interval: 86400
+    behavior: classical
+    format: text
   x:
     type: http
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs
@@ -166,7 +166,7 @@ rules:
   - RULE-SET,blizzard,GAME
   - RULE-SET,game,GAME
   - RULE-SET,steam,GAME
-  - RULE-SET,emby,STREAM
+  - RULE-SET,stream,STREAM
   - RULE-SET,ai,US
   - RULE-SET,github,US
   - RULE-SET,google,US
