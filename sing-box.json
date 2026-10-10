@@ -176,7 +176,7 @@
       },
       {
         "rule_set": [
-          "emby"
+          "stream"
         ],
         "outbound": "stream"
       },
@@ -230,11 +230,6 @@
       },
       {
         "type": "remote",
-        "tag": "emby",
-        "url": "https://raw.githubusercontent.com/yahngming/rules/master/emby.json"
-      },
-      {
-        "type": "remote",
         "tag": "force",
         "url": "https://raw.githubusercontent.com/yahngming/rules/master/force.json"
       },
@@ -262,6 +257,11 @@
         "type": "remote",
         "tag": "steam",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs"
+      },
+      {
+        "type": "remote",
+        "tag": "stream",
+        "url": "https://raw.githubusercontent.com/yahngming/rules/master/stream.json"
       },
       {
         "type": "remote",
