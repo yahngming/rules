@@ -1,4 +1,4 @@
-const { name = "everything", type = "collection" } = $arguments || {};
+const { name = "aio", type = "collection" } = $arguments || {};
 
 function getTags(proxies, regex) {
 	return (regex ? proxies.filter(p => regex.test(p.tag)) : proxies).map(p => p.tag)
